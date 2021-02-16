@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.194" name="ELGA_Procedures" displayName="ELGA_Procedures" effectiveDate="2017-09-06T21:25:16" statusCode="draft" url="http://art-decor.org/decor/services/" ident="elgaps-" referencedFrom="at-cda-bbr-">
+        <desc language="de-DE">Leistungskatalog Gesamt in der jeweils aktuellen Fassung</desc>
+        <sourceCodeSystem id="1.2.40.0.34.5.185" identifierName="" canonicalUri="urn:oid:1.2.40.0.34.5.185" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.185" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.185" canonicalUriR4="urn:oid:1.2.40.0.34.5.185"/>
+        <sourceCodeSystem id="1.2.40.0.34.5.172" identifierName="" canonicalUri="urn:oid:1.2.40.0.34.5.172" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.172" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.172" canonicalUriR4="urn:oid:1.2.40.0.34.5.172"/>
+        <sourceCodeSystem id="1.2.40.0.34.5.57" identifierName="" canonicalUri="urn:oid:1.2.40.0.34.5.57" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.57" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.57" canonicalUriR4="urn:oid:1.2.40.0.34.5.57"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <completeCodeSystem codeSystem="1.2.40.0.34.5.185"/>
+        <completeCodeSystem codeSystem="1.2.40.0.34.5.172"/>
+        <completeCodeSystem codeSystem="1.2.40.0.34.5.57"/>
+    </valueSet>
+</valueSets>

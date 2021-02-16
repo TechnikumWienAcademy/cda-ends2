@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.210" name="atcdabbr_NoInformationQualifier_VS" displayName="atcdabbr_NoInformationQualifier_VS" effectiveDate="2020-05-08T13:51:56" statusCode="draft" versionLabel="202005(-beta)" url="http://art-decor.org/decor/services/" ident="at-cda-bbr-" referencedFrom="exnds-">
+        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms" canonicalUri="http://snomed.info/sct" canonicalUriDSTU2="http://snomed.info/sct" canonicalUriSTU3="http://snomed.info/sct" canonicalUriR4="http://snomed.info/sct"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+        <conceptList>
+            <concept code="373068000" codeSystem="2.16.840.1.113883.6.96" displayName="Undetermined (qualifier value)" level="0" type="L">
+                <desc language="de-DE">
+                    <span style="color: rgb(34, 34, 34); font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Helvetica, Arial, sans-serif, &#34;Apple Color Emoji&#34;, &#34;Segoe UI Emoji&#34;, &#34;Segoe UI Symbol&#34;; font-size: 14px;">Nicht bekannt (weder Patient noch Arzt wissen etwas)</span>
+                </desc>
+            </concept>
+            <concept code="1631000175102" codeSystem="2.16.840.1.113883.6.96" displayName="Patient not asked (contextual qualifier) (qualifier value)" level="0" type="L">
+                <desc language="de-DE">
+                    <span style="color: rgb(34, 34, 34); font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Helvetica, Arial, sans-serif, &#34;Apple Color Emoji&#34;, &#34;Segoe UI Emoji&#34;, &#34;Segoe UI Symbol&#34;; font-size: 14px;">Nicht gefragt (unbekannt, weil der Arzt den Patienten nicht gefragt hat)</span>
+                </desc>
+            </concept>
+            <concept code="876785008" codeSystem="2.16.840.1.113883.6.96" displayName="Unobtainable (qualifier value)" level="0" type="L">
+                <desc language="de-DE">
+                    <span style="color: rgb(34, 34, 34); font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Helvetica, Arial, sans-serif, &#34;Apple Color Emoji&#34;, &#34;Segoe UI Emoji&#34;, &#34;Segoe UI Symbol&#34;; font-size: 14px;">Nicht erhebbar (unbekannt, weil der Arzt den Patienten nicht fragen konnte)</span>
+                    <br clear="none"/>
+                </desc>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

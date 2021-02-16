@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.86" name="HL7-at_XDS-Dokumentenklassen" displayName="HL7-at_XDS-Dokumentenklassen" effectiveDate="2020-09-18T00:00:00" statusCode="draft" versionLabel="202009" url="http://art-decor.org/decor/services/" ident="at-cda-bbr-" referencedFrom="exnds-">
+        <desc language="de-DE">Liste der für ÖSTERREICH gültigen Dokumentklassen und ihrer LOINC-Codes für CDA und die XDS-Metadaten. Die oberste Hierarchieebene 0 umfasst die Hauptdokumentenklassen für ELGA Dokumente, diese ist auch in den XDSMetadaten.ClassCode zu übertragen. Die Hierarchiebene 1 enthält die Spezialisierungen der Hauptdokumentenklassen, sie können in den XDSMetadaten.TypeCode an die Registry übermittelt werden. Im Element ClinicalDocument.Code (CDA) werden bevorzugt die spezialisierten Codes der Blattebene (unterste Ebene, Dokumententyp) verwendet. Der Titel eines Dokumentes wird im Dokument über das Stylesheet angezeigt (siehe Hinweise)</desc>
+        <desc language="en-US">This is a set of document classes and LOINC-Codes valid in AUSTRIA for CDA and XDS Metadata. The top most level 0 contains the root-document classes for ELGA documents (also assigend to  XDSMetadata.ClassCode). The hierarchie level 1 contains specialities of the root-document classes, which could be transferred to the registry,  using XDSMetadata.TypeCode. For the field ClinicalDocument.Code (CDA), it is preferred to use the most specialised code applicable (leaf elements, lowest level). The documents title is displayed via the Stylesheet (see "Hinweise")</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.6.1" identifierName="Logical&#160;Observation&#160;Identifier&#160;Names&#160;and&#160;Codes" canonicalUri="http://loinc.org" canonicalUriDSTU2="http://loinc.org" canonicalUriSTU3="http://loinc.org" canonicalUriR4="http://loinc.org"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="18842-5" codeSystem="2.16.840.1.113883.6.1" displayName="Discharge summary" level="0" type="S"/>
+            <concept code="11490-0" codeSystem="2.16.840.1.113883.6.1" displayName="Physician Discharge summary" level="1" type="L"/>
+            <concept code="34745-0" codeSystem="2.16.840.1.113883.6.1" displayName="Nurse Discharge summary" level="1" type="L"/>
+            <concept code="18761-7" codeSystem="2.16.840.1.113883.6.1" displayName="Transfer summary note" level="1" type="L"/>
+            <concept code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Laboratory report" level="0" type="L"/>
+            <concept code="18748-4" codeSystem="2.16.840.1.113883.6.1" displayName="Diagnostic imaging study" level="0" type="S"/>
+            <concept code="25045-6" codeSystem="2.16.840.1.113883.6.1" displayName="CT Unspecified body region" level="1" type="L"/>
+            <concept code="25056-3" codeSystem="2.16.840.1.113883.6.1" displayName="MR Unspecified body region" level="1" type="L"/>
+            <concept code="25061-3" codeSystem="2.16.840.1.113883.6.1" displayName="US Unspecified body region" level="1" type="L"/>
+            <concept code="49118-3" codeSystem="2.16.840.1.113883.6.1" displayName="NM Unspecified body region Views" level="1" type="L"/>
+            <concept code="44136-0" codeSystem="2.16.840.1.113883.6.1" displayName="PT Unspecified body region" level="1" type="L"/>
+            <concept code="18745-0" codeSystem="2.16.840.1.113883.6.1" displayName="Cardiac catheterization study" level="1" type="L"/>
+            <concept code="42148-7" codeSystem="2.16.840.1.113883.6.1" displayName="US Heart" level="1" type="L"/>
+            <concept code="18782-3" codeSystem="2.16.840.1.113883.6.1" displayName="Radiology Study observation (narrative)" level="1" type="L"/>
+            <concept code="18746-8" codeSystem="2.16.840.1.113883.6.1" displayName="Colonoscopy study" level="1" type="L"/>
+            <concept code="18751-8" codeSystem="2.16.840.1.113883.6.1" displayName="Endoscopy study" level="1" type="L"/>
+            <concept code="11525-3" codeSystem="2.16.840.1.113883.6.1" displayName="US for pregnancy" level="1" type="L"/>
+            <concept code="55113-5" codeSystem="2.16.840.1.113883.6.1" displayName="Key images Document Radiology" level="0" type="L"/>
+            <concept code="52471-0" codeSystem="2.16.840.1.113883.6.1" displayName="Medications" level="0" type="S"/>
+            <concept code="57833-6" codeSystem="2.16.840.1.113883.6.1" displayName="Prescription for medication" level="1" type="L"/>
+            <concept code="60593-1" codeSystem="2.16.840.1.113883.6.1" displayName="Medication dispensed.extended Document" level="1" type="L"/>
+            <concept code="56445-0" codeSystem="2.16.840.1.113883.6.1" displayName="Medication summary Document" level="1" type="L"/>
+            <concept code="61356-2" codeSystem="2.16.840.1.113883.6.1" displayName="Medication pharmaceutical advice.extended Document" level="1" type="L"/>
+            <concept code="11529-5" codeSystem="2.16.840.1.113883.6.1" displayName="Surgical pathology study" level="0" type="L"/>
+            <concept code="18743-5" codeSystem="2.16.840.1.113883.6.1" displayName="Autopsy report" level="0" type="L"/>
+            <concept code="18725-2" codeSystem="2.16.840.1.113883.6.1" displayName="Microbiology studies (set)" level="0" type="L"/>
+            <concept code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Surgical operation note" level="0" type="L"/>
+            <concept code="57829-4" codeSystem="2.16.840.1.113883.6.1" displayName="Prescription for medical equipment or product" level="0" type="S"/>
+            <concept code="64288-4" codeSystem="2.16.840.1.113883.6.1" displayName="Prescription for eyewear" level="1" type="L"/>
+            <concept code="75476-2" codeSystem="2.16.840.1.113883.6.1" displayName="Physician note" level="0" type="S"/>
+            <concept code="34131-3" codeSystem="2.16.840.1.113883.6.1" displayName="Outpatient Progress note" level="1" type="L"/>
+            <concept code="34764-1" codeSystem="2.16.840.1.113883.6.1" displayName="General medicine Consult note" level="1" type="L"/>
+            <concept code="77403-4" codeSystem="2.16.840.1.113883.6.1" displayName="Anesthesiology Consult note" level="1" type="L"/>
+            <concept code="34803-7" codeSystem="2.16.840.1.113883.6.1" displayName="Occupational medicine Consult note" level="1" type="L"/>
+            <concept code="34807-8" codeSystem="2.16.840.1.113883.6.1" displayName="Ophthalmology Consult note" level="1" type="L"/>
+            <concept code="33720-4" codeSystem="2.16.840.1.113883.6.1" displayName="Blood bank consult" level="1" type="L"/>
+            <concept code="34847-4" codeSystem="2.16.840.1.113883.6.1" displayName="Surgery Consult note" level="1" type="L"/>
+            <concept code="34758-3" codeSystem="2.16.840.1.113883.6.1" displayName="Dermatology Consult note" level="1" type="L"/>
+            <concept code="34760-9" codeSystem="2.16.840.1.113883.6.1" displayName="Diabetology Consult note" level="1" type="L"/>
+            <concept code="34879-7" codeSystem="2.16.840.1.113883.6.1" displayName="Endocrinology Consult note" level="1" type="L"/>
+            <concept code="34761-7" codeSystem="2.16.840.1.113883.6.1" displayName="Gastroenterology Consult note" level="1" type="L"/>
+            <concept code="34853-2" codeSystem="2.16.840.1.113883.6.1" displayName="Vascular surgery Consult note" level="1" type="L"/>
+            <concept code="34776-5" codeSystem="2.16.840.1.113883.6.1" displayName="Geriatric medicine Consult note" level="1" type="L"/>
+            <concept code="69438-0" codeSystem="2.16.840.1.113883.6.1" displayName="Forensic medicine Referral note" level="1" type="L"/>
+            <concept code="34777-3" codeSystem="2.16.840.1.113883.6.1" displayName="Obstetrics and Gynecology Consult note" level="1" type="L"/>
+            <concept code="34816-9" codeSystem="2.16.840.1.113883.6.1" displayName="Otolaryngology Consult note" level="1" type="L"/>
+            <concept code="34779-9" codeSystem="2.16.840.1.113883.6.1" displayName="Hematology+Medical oncology Consult note" level="1" type="L"/>
+            <concept code="80575-4" codeSystem="2.16.840.1.113883.6.1" displayName="Cardiac surgery Consult note" level="1" type="L"/>
+            <concept code="77429-9" codeSystem="2.16.840.1.113883.6.1" displayName="Allergy and immunology Consult note" level="1" type="L"/>
+            <concept code="34781-5" codeSystem="2.16.840.1.113883.6.1" displayName="Infectious disease Consult note" level="1" type="L"/>
+            <concept code="85238-4" codeSystem="2.16.840.1.113883.6.1" displayName="Internal medicine Consult note" level="1" type="L"/>
+            <concept code="34099-2" codeSystem="2.16.840.1.113883.6.1" displayName="Cardiology Consult note" level="1" type="L"/>
+            <concept code="68881-2" codeSystem="2.16.840.1.113883.6.1" displayName="Pediatric surgery Note" level="1" type="L"/>
+            <concept code="68645-1" codeSystem="2.16.840.1.113883.6.1" displayName="Child and adolescent psychiatry Note" level="1" type="L"/>
+            <concept code="78254-0" codeSystem="2.16.840.1.113883.6.1" displayName="Clinical genetics Consult note" level="1" type="L"/>
+            <concept code="34812-8" codeSystem="2.16.840.1.113883.6.1" displayName="Oral and Maxillofacial Surgery Consult note" level="1" type="L"/>
+            <concept code="34795-5" codeSystem="2.16.840.1.113883.6.1" displayName="Nephrology Consult note" level="1" type="L"/>
+            <concept code="34798-9" codeSystem="2.16.840.1.113883.6.1" displayName="Neurological surgery Consult note" level="1" type="L"/>
+            <concept code="34797-1" codeSystem="2.16.840.1.113883.6.1" displayName="Neurology Consult note" level="1" type="L"/>
+            <concept code="34878-9" codeSystem="2.16.840.1.113883.6.1" displayName="Emergency medicine Note" level="1" type="L"/>
+            <concept code="34805-2" codeSystem="2.16.840.1.113883.6.1" displayName="Oncology Consult note" level="1" type="L"/>
+            <concept code="34814-4" codeSystem="2.16.840.1.113883.6.1" displayName="Orthopaedic surgery Consult note" level="1" type="L"/>
+            <concept code="78726-7" codeSystem="2.16.840.1.113883.6.1" displayName="Pediatrics Consult Note" level="1" type="L"/>
+            <concept code="78568-3" codeSystem="2.16.840.1.113883.6.1" displayName="Palliative care Consult Note" level="1" type="L"/>
+            <concept code="34820-1" codeSystem="2.16.840.1.113883.6.1" displayName="Pharmacology Consult note" level="1" type="L"/>
+            <concept code="34822-7" codeSystem="2.16.840.1.113883.6.1" displayName="Physical medicine and rehab Consult note" level="1" type="L"/>
+            <concept code="34826-8" codeSystem="2.16.840.1.113883.6.1" displayName="Plastic surgery Consult note" level="1" type="L"/>
+            <concept code="67862-3" codeSystem="2.16.840.1.113883.6.1" displayName="Preoperative evaluation and management Note" level="1" type="L"/>
+            <concept code="34788-0" codeSystem="2.16.840.1.113883.6.1" displayName="Psychiatry Consult note" level="1" type="L"/>
+            <concept code="34103-2" codeSystem="2.16.840.1.113883.6.1" displayName="Pulmonary Consult note" level="1" type="L"/>
+            <concept code="82359-1" codeSystem="2.16.840.1.113883.6.1" displayName="Reproductive endocrinology and infertility Consult note" level="1" type="L"/>
+            <concept code="34839-1" codeSystem="2.16.840.1.113883.6.1" displayName="Rheumatology Consult note" level="1" type="L"/>
+            <concept code="85866-2" codeSystem="2.16.840.1.113883.6.1" displayName="Sleep medicine Consult note" level="1" type="L"/>
+            <concept code="78738-2" codeSystem="2.16.840.1.113883.6.1" displayName="Sports medicine Consult note" level="1" type="L"/>
+            <concept code="34831-8" codeSystem="2.16.840.1.113883.6.1" displayName="Radiation oncology Consult note" level="1" type="L"/>
+            <concept code="34849-0" codeSystem="2.16.840.1.113883.6.1" displayName="Cardiothoracic surgery Consult note" level="1" type="L"/>
+            <concept code="78732-5" codeSystem="2.16.840.1.113883.6.1" displayName="Trauma Consult note" level="1" type="L"/>
+            <concept code="34851-6" codeSystem="2.16.840.1.113883.6.1" displayName="Urology Consult note" level="1" type="L"/>
+            <concept code="34756-7" codeSystem="2.16.840.1.113883.6.1" displayName="Dentistry Consult note" level="1" type="L"/>
+            <concept code="28651-8" codeSystem="2.16.840.1.113883.6.1" displayName="Nurse Transfer note" level="0" type="L"/>
+            <concept code="46215-0" codeSystem="2.16.840.1.113883.6.1" displayName="Wound care management Note" level="0" type="L"/>
+            <concept code="57016-8" codeSystem="2.16.840.1.113883.6.1" displayName="Privacy policy acknowledgment Document" level="0" type="L"/>
+            <concept code="42348-3" codeSystem="2.16.840.1.113883.6.1" displayName="Advance directives" level="0" type="L"/>
+            <concept code="64298-3" codeSystem="2.16.840.1.113883.6.1" displayName="Power of attorney" level="0" type="L"/>
+            <concept code="34855-7" codeSystem="2.16.840.1.113883.6.1" displayName="Occupational therapy Consult note" level="0" type="L"/>
+            <concept code="34845-8" codeSystem="2.16.840.1.113883.6.1" displayName="Speech-language pathology+Audiology Consult note" level="0" type="L"/>
+            <concept code="34841-7" codeSystem="2.16.840.1.113883.6.1" displayName="Social work Consult note" level="0" type="L"/>
+            <concept code="34791-4" codeSystem="2.16.840.1.113883.6.1" displayName="Psychology Consult note" level="0" type="L"/>
+            <concept code="34800-3" codeSystem="2.16.840.1.113883.6.1" displayName="Nutrition and dietetics Consult note" level="0" type="L"/>
+            <concept code="34824-3" codeSystem="2.16.840.1.113883.6.1" displayName="Physical therapy Consult note" level="0" type="L"/>
+            <concept code="57057-2" codeSystem="2.16.840.1.113883.6.1" displayName="Labor and delivery summary note" level="0" type="L"/>
+            <concept code="59268-3" codeSystem="2.16.840.1.113883.6.1" displayName="Neonatal care report" level="0" type="L"/>
+            <concept code="34810-2" codeSystem="2.16.840.1.113883.6.1" displayName="Optometry Consult note" level="0" type="L"/>
+            <concept code="29749-9" codeSystem="2.16.840.1.113883.6.1" displayName="Dialysis records" level="0" type="L"/>
+            <concept code="72134-0" codeSystem="2.16.840.1.113883.6.1" displayName="Cancer event report" level="0" type="L"/>
+            <concept code="57830-2" codeSystem="2.16.840.1.113883.6.1" displayName="Admission request Document" level="0" type="L"/>
+            <concept code="57834-4" codeSystem="2.16.840.1.113883.6.1" displayName="Patient transportation request Document" level="0" type="L"/>
+            <concept code="11524-6" codeSystem="2.16.840.1.113883.6.1" displayName="EKG study" level="0" type="L"/>
+            <concept code="46209-3" codeSystem="2.16.840.1.113883.6.1" displayName="Provider orders" level="0" type="L"/>
+            <concept code="11488-4" codeSystem="2.16.840.1.113883.6.1" displayName="Consult note" level="0" type="L"/>
+            <concept code="57831-0" codeSystem="2.16.840.1.113883.6.1" displayName="Prescription for rehabilitation" level="0" type="L"/>
+            <concept code="60591-5" codeSystem="2.16.840.1.113883.6.1" displayName="Patient summary Document" level="0" type="L"/>
+            <concept code="34133-9" codeSystem="2.16.840.1.113883.6.1" displayName="Summary of episode note" level="0" type="L"/>
+            <concept code="11369-6" codeSystem="2.16.840.1.113883.6.1" displayName="History of Immunization" level="0" type="S"/>
+            <concept code="82593-5" codeSystem="2.16.840.1.113883.6.1" displayName="Immunization summary report" level="1" type="L"/>
+            <concept code="87273-9" codeSystem="2.16.840.1.113883.6.1" displayName="Immunization note" level="1" type="L"/>
+            <concept code="75496-0" codeSystem="2.16.840.1.113883.6.1" displayName="Telehealth Note" level="0" type="S"/>
+            <concept code="75497-8" codeSystem="2.16.840.1.113883.6.1" displayName="Telehealth Progress Note" level="1" type="L"/>
+            <concept code="75498-6" codeSystem="2.16.840.1.113883.6.1" displayName="Telehealth Summary Note" level="1" type="L"/>
+            <concept code="75500-9" codeSystem="2.16.840.1.113883.6.1" displayName="Triage note" level="0" type="S"/>
+            <concept code="54094-8" codeSystem="2.16.840.1.113883.6.1" displayName="Emergency department Triage note" level="1" type="L"/>
+            <concept code="75499-4" codeSystem="2.16.840.1.113883.6.1" displayName="Telephone encounter Triage note" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

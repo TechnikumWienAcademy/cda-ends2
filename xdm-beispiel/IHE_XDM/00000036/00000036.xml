@@ -1,0 +1,2848 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="ELGA_Stylesheet_v1.0.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:hl7at="urn:hl7-at:v3" xmlns:pharm="urn:ihe:pharm:medication">
+	<!--	=======================================================================	Allgemeiner Ambulanzbefund	*** CDA Demo-Dokument ***	Dies ist ein Beispielbefund. Bei den Inhalten handelt es sich um synthetische Mustertexte und keinesfalls um personenbezogene Echtdaten oder realistische Befunde.	Das Beispiel veranschaulicht die technischen Möglichkeiten unter Verwendung eines Maximums der erlaubten Optionen.	Autoren	Matthias Frohner, FHTW	Nikolaus Krondraf, FHTW	Stefan Sabutsch, ELGA	Dokumentrevision	V02	Datum 				02.05.2019	Die Kommentare in diesem CDA Dokument dienen lediglich der Orientierungshilfe und sind nicht 	Bestandteil einer konkreten Implementierung!	=======================================================================	 		======================================================================= 	-->
+	<!--	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	Administrative Daten "CDA Header"	siehe Allgemeiner Leitfaden, Kapitel 6	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************ 	-->
+	<!--	========================================================================	========================================================================	Dokumentenstruktur	siehe Allgemeiner Leitfaden, Kapitel 6.2	========================================================================	======================================================================== 	-->
+	<!--	Hoheitsbereich des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.2.3) 	-->
+	<realmCode code="AT"/>
+	<!--	Dokumentformat (siehe Allgemeiner Leitfaden, Kapitel 6.2.4) 	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	
+	<!-- OID des allgemeinen Leitfadens für eHealth Austria Dokumente -->
+	<templateId root = "1.2.40.0.34.6.0.11.0.1"/>
+	
+	<!-- OID des Leitfadens in Version 1.00-->
+	<templateId root="1.2.40.0.34.7.25.1"/>
+	
+	<!-- OID des Leitfadens in Version 1.00-->
+	<templateId root="1.2.40.0.34.6.0.11.0.6"/>
+
+	<!--	Dokumenten-Id (siehe Allgemeiner Leitfaden, Kapitel 6.2.6) 	-->
+	<id root="1.2.40.0.34.99.4613.3.1" extension="1234567.1" assigningAuthorityName="Amadeus Spital"/>
+	<!--	Dokumentenklasse (siehe Allgemeiner Leitfaden, Kapitel 6.2.7) 	-->
+	
+	<code code="EXNDS_Patientendaten" displayName="Datenbankexport EXNDS - Patientendaten" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts">
+		<translation code="DatenbankexportEXNDS" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts" displayName="Datenbankexport EXNDS"/>
+	</code>
+	
+	<!--	Titel des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.2.8) 	-->
+	<title>Datenbankexport</title>
+	
+	
+	
+	<!-- Terminologiedatum -->
+	<hl7at:terminologyDate value="20190606"/>
+	
+	<hl7at:formatCode code="urn:hl7-at:exnds-patient:2021"/>
+	
+	<hl7at:practiceSettingCode code="F001" codeSystem="1.2.40.0.34.5.12"/>
+	
+	<!--	Erstellungsdatum des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.2.9) 	-->
+	<effectiveTime value="20190817121500+0100"/>
+	<!--	Vertraulichkeitscode (siehe Allgemeiner Leitfaden, Kapitel 6.2.10) 	-->
+	<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.5.25" codeSystemName="HL7:Confidentiality"/>
+	<!--	Sprachcode des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.2.11) 	-->
+	<languageCode code="de-AT"/>
+	<!--	Versionierung des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.2.12) 	-->
+	<setId root="1.2.40.0.34.99.4613.3.1" extension="1234567" assigningAuthorityName="Amadeus Spital"/>
+	<versionNumber value="1"/>
+	<!--	========================================================================	========================================================================	Teilnehmende Parteien	siehe Allgemeiner Leitfaden, Kapitel 6.3	========================================================================	======================================================================== 	-->
+	<!--	========================================================================	Patient (siehe Allgemeiner Leitfaden, Kapitel 6.3.1)	======================================================================== 	-->
+	<recordTarget>
+		<patientRole>
+			<!-- 	IDs des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.2)	-->
+			<!-- Identifikation des Patienten im lokalen System -->
+			<id root="1.2.40.0.34.99.4613.3.2" extension="36" assigningAuthorityName="Amadeus Spital"/>
+			<!-- Sozialversicherungsnummer des Patienten	-->
+			<id root="1.2.40.0.10.1.4.3.1" extension="0" assigningAuthorityName="Österreichische Sozialversicherung"/>
+			<!--	Adresse des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.3)	-->
+			<addr use="H">
+				<streetAddressLine>STR0000000036</streetAddressLine>
+				<postalCode>0036</postalCode>
+				<city>WIEN0000000036</city>
+				<!-- Hier wird der Klartext des Bundeslandes angegeben und nicht wie im alten ENDS der Code laut HV-Liste -->
+				<state>Niederösterreich</state>
+				<!-- Hier wird der 3-stellige ISO Code genutz und nicht der einstellige Code laut altem ENDS Bsp. -->
+				<country>AUT</country>
+			</addr>
+			<!--	Kontaktdaten des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.4)	-->
+			<telecom use="H" value="tel:0676.4225858"/>
+			<telecom value="mailto:herberthannes.mustermann@provider.at"/>
+			<patient>
+				<!-- 	Name des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.5)	-->
+				<name>
+					<prefix qualifier="AC">Dipl.Ing.</prefix>
+					<prefix qualifier="PR">Hofrat</prefix>
+					<given>Maximilian</given>
+					<family>TEST0000000036</family>
+					<family qualifier="BR">VorDerHeirat</family>
+					<suffix qualifier="AC">BSc</suffix>
+					<suffix qualifier="AC">MBA</suffix>
+				</name>
+				<!--	Geschlecht des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.6)	-->
+				<administrativeGenderCode code="M" displayName="Male" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7:AdministrativeGender"/>
+				<!--	Geburtsdatum des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.7)	-->
+				<birthTime value="20010826"/>
+				<!--	Familienstand des Patienten  (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.8)	-->
+				<maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="HL7:MaritalStatus"/>
+				<!--	Religionszugehörigkeit des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.9) -->
+				<religiousAffiliationCode code="101" displayName="Römisch-Katholisch" codeSystem="2.16.840.1.113883.2.16.1.4.1" codeSystemName="HL7.AT:ReligionAustria"/>
+				<!-- 	Vormund/Sachwalter des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.13)	"Organisation"	<guardian>Eine Organisation als Guardian, hier als Strukturbeispiel	<addr><streetAddressLine>Kinderdorfstraße 1</streetAddressLine><postalCode>2371</postalCode><city>Hinterbrühl</city><state>Niederösterreich</state><country>AUT</country></addr>Kontaktdaten des Vormunds/Sachwalters (Organisation)	<telecom use="H" value="tel:+43.2236.2928"/><telecom use="WP" value="tel:+43.2236.9000"/><guardianOrganization>Name der Vormund/Sachwalter-Organisation	<name>SOS Kinderdorf Hinterbrühl</name></guardianOrganization></guardian>-->
+				<!-- 	Vormund/Sachwalter des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.13)	"Person"	-->
+				<guardian>
+					<!--	Adresse des Vormunds/Sachwalters (Person)	-->
+					<addr>
+						<streetAddressLine>Musterstraße 1234</streetAddressLine>
+						<postalCode>8011</postalCode>
+						<city>Graz</city>
+						<state>Steiermark</state>
+						<country>AUT</country>
+					</addr>
+					<!--	Kontaktdaten des Vormunds/Sachwalters (Person)	-->
+					<telecom use="MC" value="tel:+43.676.1234567"/>
+					<telecom use="H" value="tel:+43.316.717.653.9939"/>
+					<telecom use="WP" value="tel:+43.316.608.271.9000"/>
+					<guardianPerson>
+						<!--	Name des Vormunds/Sachwalters (Person)	-->
+						<name>
+							<given>Susi</given>
+							<family>Sorgenvoll</family>
+						</name>
+					</guardianPerson>
+				</guardian>
+				<!-- 	Geburtsort des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.14)	-->
+				<birthplace>
+					<place>
+						<addr>Graz</addr>
+					</place>
+				</birthplace>
+				<!-- 	Sprachfähigkeiten des Patienten (siehe Allgemeiner Leitfaden, Kapitel 6.3.1.2.12) 	-->
+				<languageCommunication>
+					<languageCode code="de"/>
+					<modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="HL7:LanguageAbilityMode"/>
+					<proficiencyLevelCode code="E" displayName="Excellent" codeSystem="2.16.840.1.113883.5.61" codeSystemName="HL7:LanguageAbilityProficiency"/>
+					<preferenceInd value="true"/>
+				</languageCommunication>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<!--	========================================================================	Verfasser des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.2)	======================================================================== 	-->
+	<author>
+		<!--	Funktionscode des Verfassers des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.2.3.1.1)	-->
+		<functionCode code="OA" displayName="Diensthabender Oberarzt" codeSystem="1.2.40.0.34.99.4613.10.1" codeSystemName="Amadeus Spital - Funktionscodes"/>
+		<!--	Zeitpunkt der Erstellung (z.B. des Diktats) (siehe Allgemeiner Leitfaden, Kapitel 6.3.2.3.1.2)	-->
+		<time value="20190817090500+0100"/>
+		<assignedAuthor>
+			<!--  	Identifikation des Verfassers des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.2.3.1.3)	-->
+			<id root="1.2.40.0.34.99.4613.3.3" extension="2323" assigningAuthorityName="Amadeus Spital"/>
+			<!--  	Fachrichtung des Verfassers des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.2.3.1.4)	-->
+			<code code="100" displayName="Ärztin/Arzt für Allgemeinmedizin" codeSystem="1.2.40.0.34.5.2" codeSystemName="gda-rollen"/>
+			<!--	Kontaktdaten des Verfassers des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.2.3.1.5)	-->
+			<telecom use="WP" value="tel:+43.6138.3453446.1111"/>
+			<!--	Personendaten des Verfassers des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.2.3.1.6)	-->
+			<assignedPerson>
+				<!-- Name des Verfassers des Dokuments -->
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Isabella</given>
+					<family>Stern</family>
+				</name>
+			</assignedPerson>
+			<!--	Organisation, in deren Auftrag der Verfasser des Dokuments die Dokumentation verfasst hat (siehe Allgemeiner Leitfaden, Kapitel 6.3.2.3.1.7)	-->
+			<representedOrganization>
+				<!--	ID der Organisation aus dem GDA Index	-->
+				<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+				<!--	Name der Organisation	-->
+				<name>Amadeus Spital - Urologische Ambulanz</name>
+				<!-- 	Kontaktdaten der Organisation	-->
+				<telecom value="tel:+43.6138.3453446.0"/>
+				<telecom value="fax:+43.6138.3453446.4674"/>
+				<telecom value="mailto:info@amadeusspital.at"/>
+				<telecom value="http://www.amadeusspital.at"/>
+				<!--	Adresse der Organisation	-->
+				<addr>
+					<streetName>Mozartgasse</streetName>
+					<houseNumber>1-7</houseNumber>
+					<postalCode>5350</postalCode>
+					<city>St.Wolfgang</city>
+					<state>Salzburg</state>
+					<country>AUT</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	
+	<!--	========================================================================	Verwahrer des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.4)	======================================================================== 	-->
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<!--	ID der Organisation aus dem GDA Index (siehe Allgemeiner Leitfaden, Kapitel 6.3.4.2.2)	-->
+				<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+				<!--	Name der Organisation (siehe Allgemeiner Leitfaden, Kapitel 6.3.4.2.3)	-->
+				<name>Amadeus Spital</name>
+				<!-- 	Kontaktdaten der Organisation (siehe Allgemeiner Leitfaden, Kapitel 6.3.4.2.4)	-->
+				<telecom value="tel:+43.6138.3453446.0"/>
+				<!--	Adresse der Organisation (siehe Allgemeiner Leitfaden, Kapitel 6.3.4.2.5)	-->
+				<addr>
+					<streetName>Mozartgasse</streetName>
+					<houseNumber>1-7</houseNumber>
+					<postalCode>5350</postalCode>
+					<city>St.Wolfgang</city>
+					<state>Salzburg</state>
+					<country>AUT</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	
+	
+	<!--	========================================================================	Rechtlicher Unterzeichner (siehe Allgemeiner Leitfaden, Kapitel 6.3.6)	======================================================================== 	-->
+	<legalAuthenticator>
+		<!-- 	Zeitpunkt der Unterzeichnung (siehe Allgemeiner Leitfaden, Kapitel 6.3.6.2.2)	-->
+		<time value="20190817112500+0100"/>
+		<!-- 	Signaturcode (siehe Allgemeiner Leitfaden, Kapitel 6.3.6.2.3)	-->
+		<signatureCode code="S"/>
+		<!--	Personen- und Organisationsdaten des Rechtlichen Unterzeichners des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.6.2.4)	-->
+		<assignedEntity>
+			<!--  	Identifikation des Rechtlichen Unterzeichners des Dokuments	-->
+			<id root="1.2.40.0.34.99.4613.3.3" extension="2222" assigningAuthorityName="Amadeus Spital"/>
+			<!--	Kontaktdaten des Rechtlichen Unterzeichners des Dokuments	-->
+			<telecom use="WP" value="tel:+43.6138.3453446.2222"/>
+			<!--	Personendaten des Rechtlichen Unterzeichners des Dokuments	-->
+			<assignedPerson>
+				<!-- Name des Rechtlichen Unterzeichners des Dokuments -->
+				<name>
+					<prefix>Univ.-Prof. Dr.</prefix>
+					<given>Sigrid</given>
+					<family>Kollmann</family>
+				</name>
+			</assignedPerson>
+			<!--	Organisation, in deren Auftrag der Rechtlichen Unterzeichners des Dokuments die Dokumentation unterzeichnet hat	-->
+			<representedOrganization>
+				<!--	ID der Organisation aus dem GDA Index	-->
+				<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+				<!--	Name der Organisation	-->
+				<name>Amadeus Spital - Urologische Ambulanz</name>
+				<!-- 	Kontaktdaten der Organisation	-->
+				<telecom value="tel:+43.6138.3453446.0"/>
+				<telecom value="fax:+43.6138.3453446.4674"/>
+				<telecom value="mailto:info@amadeusspital.at"/>
+				<telecom value="http://www.amadeusspital.at"/>
+				<!--	Adresse der Organisation	-->
+				<addr>
+					<streetName>Mozartgasse</streetName>
+					<houseNumber>1-7</houseNumber>
+					<postalCode>5350</postalCode>
+					<city>St.Wolfgang</city>
+					<state>Salzburg</state>
+					<country>AUT</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!--	========================================================================	Weitere Unterzeichner (siehe Allgemeiner Leitfaden, Kapitel 6.3.7)	======================================================================== 	-->
+	<authenticator>
+		<!-- 	Zeitpunkt der Unterzeichnung (siehe Allgemeiner Leitfaden, Kapitel 6.3.7.2.2)	-->
+		<time value="20190817113500+0100"/>
+		<!-- 	Signaturcode (siehe Allgemeiner Leitfaden, Kapitel 6.3.7.2.3)	-->
+		<signatureCode code="S"/>
+		<!--	Personen- und Organisationsdaten des Weiteren Unterzeichners des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.3.7.2.4)	-->
+		<assignedEntity>
+			<!--  	Identifikation des Weiteren Unterzeichners des Dokuments	-->
+			<id root="1.2.40.0.34.99.4613.3.3" extension="2424" assigningAuthorityName="Amadeus Spital"/>
+			<!--	Kontaktdaten des Weiteren Unterzeichners des Dokuments	-->
+			<telecom use="WP" value="tel:+43.6138.3453446.3333"/>
+			<!--	Personendaten des Weiteren Unterzeichners des Dokuments	-->
+			<assignedPerson>
+				<!-- Name des Weiteren Unterzeichners des Dokuments -->
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Walter</given>
+					<family>Hummel</family>
+				</name>
+			</assignedPerson>
+			<!--	Organisation, in deren Auftrag der Weiteren Unterzeichner des Dokuments die Dokumentation unterzeichnet hat	-->
+			<representedOrganization>
+				<!--	ID der Organisation aus dem GDA Index	-->
+				<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+				<!--	Name der Organisation	-->
+				<name>Amadeus Spital - Urologische Ambulanz</name>
+				<!-- 	Kontaktdaten der Organisation	-->
+				<telecom value="tel:+43.6138.3453446.0"/>
+				<telecom value="fax:+43.6138.3453446.4674"/>
+				<telecom value="mailto:info@amadeusspital.at"/>
+				<telecom value="http://www.amadeusspital.at"/>
+				<!--	Adresse der Organisation	-->
+				<addr>
+					<streetName>Mozartgasse</streetName>
+					<houseNumber>1-7</houseNumber>
+					<postalCode>5350</postalCode>
+					<city>St.Wolfgang</city>
+					<state>Salzburg</state>
+					<country>AUT</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</authenticator>
+	<!--	========================================================================	========================================================================	Weitere Beteiligte	siehe Allgemeiner Leitfaden, Kapitel 6.3.8	========================================================================	======================================================================== 	-->
+	<!-- 	Medizinischer Ansprechpartner (siehe Allgemeiner Leitfaden, Kapitel 6.3.8.2.2) 	-->
+	<participant typeCode="CALLBCK">
+		<templateId root="1.2.40.0.34.6.0.11.1.20"/>
+		<associatedEntity classCode="PROV">
+			<!--	Verpflichtende Telefonnummer des fachlichen Ansprechpartners	-->
+			<telecom use="WP" value="tel:+43.6138.3453446.1"/>
+			<associatedPerson>
+				<!--	Name des Fachlichen Ansprechpartners	-->
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Walter</given>
+					<family>Hummel</family>
+				</name>
+			</associatedPerson>
+			<!--	Organisation des Fachlichen Ansprechpartners	-->
+			<scopingOrganization>
+				<!--	ID der Organisation aus dem GDA Index	-->
+				<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+				<!--	Name der Organisation	-->
+				<name>Amadeus Spital - Urologische Ambulanz</name>
+				<!-- 	Kontaktdaten der Organisation	-->
+				<telecom value="tel:+43.6138.3453446.0"/>
+				<telecom value="fax:+43.6138.3453446.4674"/>
+				<telecom value="mailto:info@amadeusspital.at"/>
+				<telecom value="http://www.amadeusspital.at"/>
+				<!--	Adresse der Organisation	-->
+				<addr>
+					<streetName>Mozartgasse</streetName>
+					<houseNumber>1-7</houseNumber>
+					<postalCode>5350</postalCode>
+					<city>St.Wolfgang</city>
+					<state>Salzburg</state>
+					<country>AUT</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	
+	<!-- 	Hausarzt (siehe Allgemeiner Leitfaden, Kapitel 6.3.8.4.2) 	-->
+	<participant typeCode="IND">
+		<templateId root="1.2.40.0.34.6.0.11.1.23"/>
+		<functionCode code="PCP" displayName="primary care physician" codeSystem="2.16.840.1.113883.5.88" codeSystemName="HL7:ParticipationFunction"/>
+		<associatedEntity classCode="PROV">
+			<!--	Identifikation des Hausarztes (Person) aus dem GDA-Index	-->
+			<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+			<!--	Personendaten des Hausarztes	-->
+			<associatedPerson>
+				<name>
+					<prefix qualifier="AC">Dr.</prefix>
+					<given>Walter</given>
+					<family>Hausarzt</family>
+				</name>
+			</associatedPerson>
+			<!--	Organisation, der der Hausarzt angehört	-->
+			<scopingOrganization>
+				<!--	Identifikation der Organisation des Hausarztes	-->
+				<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+				<!--	Name der Organisation des Hausarztes	-->
+				<name>Ordination Dr. Hausarzt</name>
+				<!--	Kontaktdaten der Organisation Hausarztes	-->
+				<telecom value="tel:0512.1234567"/>
+				<telecom value="fax:0512.1234567.11"/>
+				<telecom value="mailto:office@ordination-hausarzt.at"/>
+				<telecom value="http://www.ordination-hausarzt.at"/>
+				<telecom value="me:12345678792"/>
+				<!--	Adresse der Organisation des Hausarztes	-->
+				<addr>
+					<streetName>Hausarztstraße</streetName>
+					<houseNumber>22</houseNumber>
+					<postalCode>6020</postalCode>
+					<city>Innsbruck</city>
+					<country>AUT</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	
+	<!-- 	Notfall-Kontakt / Auskunftsberechtigte Person (siehe Allgemeiner Leitfaden, Kapitel 6.3.8.5.2) 	-->
+	<participant typeCode="IND">
+		<templateId root="1.2.40.0.34.6.0.11.1.27"/>
+		<associatedEntity classCode="ECON">
+			<!--	Verwandtschaftsverhältnis zum Notfall-Kontakts / Auskunftsberechtigte Person 	-->
+			<code code="DAU" displayName="natural daughter" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7:RoleCode"/>
+			<!--	Adresse des Notfall-Kontakts / Auskunftsberechtigte Person	-->
+			<addr>
+				<streetName>Heimstrasse</streetName>
+				<houseNumber>1</houseNumber>
+				<postalCode>1220</postalCode>
+				<city>Wien</city>
+				<country>AUT</country>
+			</addr>
+			<!--	Kontaktdaten des Notfall-Kontakts / Auskunftsberechtigte Person	-->
+			<telecom use="MC" value="tel:+43.664.12345678"/>
+			<!--	Personendaten des Notfall-Kontakts / Auskunftsberechtigte Person 	-->
+			<associatedPerson>
+				<name>
+					<given>Julia</given>
+					<family>Tochter</family>
+				</name>
+			</associatedPerson>
+			<!-- Organisation des Notfallkontakts (z.B. Behörde) -->
+			<scopingOrganization>
+				<name>Jugendamt Wien</name>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- 	Angehörige (siehe Allgemeiner Leitfaden, Kapitel 6.3.8.6.2) 	-->
+	<participant typeCode="IND">
+		<templateId root="1.2.40.0.34.6.0.11.1.25"/>
+		<associatedEntity classCode="PRS">
+			<!--	Verwandtschaftsverhältnis des Angehörigen zum Patienten 	-->
+			<code code="MTH" displayName="Mother" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7:RoleCode"/>
+			<!--	Adresse des Angehörigen	-->
+			<addr>
+				<streetName>Heimstrasse</streetName>
+				<houseNumber>1</houseNumber>
+				<postalCode>1220</postalCode>
+				<city>Wien</city>
+				<country>AUT</country>
+			</addr>
+			<!--	Kontaktdaten des Angehörigen	-->
+			<telecom use="MC" value="tel:+43.664.98765432"/>
+			<!--	Personendaten des Angehörigen	-->
+			<associatedPerson>
+				<name>
+					<given>Hertha</given>
+					<family>Mutter</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<!-- 	Versicherter/Versicherung (siehe Allgemeiner Leitfaden, Kapitel 6.3.8.7.3) 	-->
+	<participant typeCode="HLD">
+		<templateId root="1.2.40.0.34.6.0.11.1.26"/>
+		<!-- Versicherungszeitraum vom 01.01.2002 – 31.12.2013 -->
+		<time>
+			<low value="20020101"/>
+			<high value="20191231"/>
+		</time>
+		<associatedEntity classCode="POLHOLD">
+			<!-- Sozialversicherungsnummer des Patienten	-->
+			<id root="1.2.40.0.10.1.4.3.1" extension="0" assigningAuthorityName="Österreichische Sozialversicherung"/>
+			<!-- Code SELF (Patient ist selbst der Versicherungsnehmer) -->
+			<code code="FAMDEP" displayName="family dependent" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7:RoleCode"/>
+
+			<!--Adresseder Person, bei der der Patient mitversichert ist -->
+			<addr>
+				<streetName>Musterstrasse</streetName>
+				<houseNumber>47-51</houseNumber>
+				<postalCode>8010</postalCode>
+				<city>Graz</city>
+				<country>AUT</country>
+			</addr>	
+
+			<!--Kontakt(e)der Person, bei der der Patient mitversichert ist -->
+			<telecom value="tel:+43.(0)50.55460-0"/>
+
+			<!--Name der Person, bei der der Patient mitversichert ist -->
+			<associatedPerson>
+				<name>
+					<given>Susanne</given>
+					<family>HVTEST0000000036</family>
+				</name>
+			</associatedPerson>
+
+			<!-- Versicherungsgesellschaft -->
+			<scopingOrganization>
+				<name>Wiener GKK</name>
+				<telecom value="tel:01.54654.0"/>
+				<telecom value="fax:01.54654.385"/>
+				<telecom value="http://esv-sva.sozvers.at"/>
+				<addr>
+					<streetName>Wiedner Hauptstraße</streetName>
+					<houseNumber>84-86</houseNumber>
+					<postalCode>1051</postalCode>
+					<city>Wien</city>
+					<state>Wien</state>
+					<country>AUT</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	
+	<!-- 	Betreuende Organisation (siehe Allgemeiner Leitfaden, Kapitel 6.3.8.8.2) 	-->
+	<participant typeCode="IND">
+		<templateId root="1.2.40.0.34.6.0.11.1.29"/>
+		<associatedEntity classCode="CAREGIVER">
+			<scopingOrganization>
+				<!--	ID der Organisation aus dem GDA Index	-->
+				<id root="1.2.99" extension="---example-only---"/>
+				<!--	Name der betreuenden Organisation	-->
+				<name>Hauskrankenpflege Sorgenfrei</name>
+				<!-- 	Kontaktdaten der Organisation	-->
+				<telecom value="tel:+43.2252.3453446.0"/>
+				<telecom value="fax:+43.2252.3453446.4674"/>
+				<telecom value="mailto:info@hauskrankenpflege-sorgenfrei.at"/>
+				<telecom value="http://www.hauskrankenpflege-sorgenfrei.at"/>
+				<!--	Adresse der Organisation	-->
+				<addr>
+					<streetName>Im schönen Walde</streetName>
+					<houseNumber>24</houseNumber>
+					<postalCode>2500</postalCode>
+					<city>Baden</city>
+					<state>Niederösterreich</state>
+					<country>AUT</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	
+	<!-- 	Weitere Behandler (siehe Allgemeiner Leitfaden, Kapitel 6.3.8.9.2) 	-->
+	<participant typeCode="CON">
+		<templateId root="1.2.40.0.34.6.0.11.1.28"/>
+		<functionCode code="130" displayName="Facharzt für Neurologie" codeSystem="1.2.40.0.34.5.160" codeSystemName="ELGA_Fachaerzte"/>
+		<associatedEntity classCode="PROV">
+			<!-- Kontaktdaten des Behandlers -->
+			<telecom value="tel:+43.6138.3453446.1"/>
+			<telecom value="mailto:robert.betterman@amadeusspital.at"/>
+			<associatedPerson>
+				<!-- Name des fachlichen Ansprechpartners -->
+				<name>
+					<prefix qualifier="AC">Dr.</prefix>
+					<given>Robert</given>
+					<family>Betterman</family>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<!--	ID der Organisation aus dem GDA Index	-->
+				<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+				<!--	Name der Organisation	-->
+				<name>Amadeus Spital - Neurologische Abteilung</name>
+				<!-- 	Kontaktdaten der Organisation	-->
+				<telecom value="tel:+43.6138.3453446.0"/>
+				<telecom value="fax:+43.6138.3453446.4674"/>
+				<telecom value="mailto:info@amadeusspital.at"/>
+				<telecom value="http://www.amadeusspital.at"/>
+				<!--	Adresse der Organisation	-->
+				<addr>
+					<streetName>Zweitstraße</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>1230</postalCode>
+					<city>Wien</city>
+					<state>Wien</state>
+					<country>AUT</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!--	========================================================================	========================================================================	Zuweisung und Ordermanagement	siehe Allgemeiner Leitfaden, Kapitel 6.4	========================================================================	======================================================================== 	-->
+	<!-- inFulfillmentOf -->
+	<inFulfillmentOf typeCode="FLFS">
+		<order classCode="ACT" moodCode="RQO">
+			<id extension="121201-023" root="2.16.840.1.113883.2.16.1.99.3.1"	assigningAuthorityName="Musterklinikum Unterstadt"/>
+		</order>
+	</inFulfillmentOf>
+	
+	<!--	========================================================================	========================================================================	Bezug zu vorgehenden Dokumenten	siehe Allgemeiner Leitfaden, Kapitel 6.6	========================================================================	======================================================================== 	-->
+	<!-- relatedDocument -->
+	<!-- Nicht angewandt in diesem Demo-Dokument -->
+	<!--	========================================================================	========================================================================	Einverständniserklärung	siehe Allgemeiner Leitfaden, Kapitel 6.7	========================================================================	======================================================================== 	-->
+	<!-- authorization -->
+	<!-- Wird in ELGA nicht verwendet -->
+	<!--	========================================================================	========================================================================	Informationen zum Patientenkontakt	siehe Allgemeiner Leitfaden, Kapitel 6.8	========================================================================	======================================================================== 	-->
+	<componentOf>
+		<encompassingEncounter>
+			<!--	Aufenthaltszahl (siehe Allgemeiner Leitfaden, Kapitel 6.8.1.2.2)	-->
+			<id root="1.2.40.0.34.99.4613.3.4" extension="Az123456" assigningAuthorityName="Amadeus Spital"/>
+			<!--	Codierung des Patientenkontakts (siehe Allgemeiner Leitfaden, Kapitel 6.8.1.2.3)	-->
+			<code code="AMB" displayName="ambulatory" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7:ActCode"/>
+			<!--	Zeitraum des Patientenkontakts (siehe Allgemeiner Leitfaden, Kapitel 6.8.1.2.4)	-->
+			<effectiveTime>
+				<!-- Anfang Leistungszeitraum -->
+				<low value="20190730104600+0200"/>
+				<!-- Ende Leistungszeitraum -->
+				<high value="20190730132000+0200"/>
+			</effectiveTime>
+			<!--	Verantwortliche Person für den Patientenkontakt (siehe Allgemeiner Leitfaden, Kapitel 6.8.1.2.5)	-->
+			<responsibleParty>
+				<assignedEntity>
+					<!--  	Identifikation der Verantwortlichen Person für den Patientenkontakt	-->
+					<id root="1.2.40.0.34.99.4613.3.3" extension="2222" assigningAuthorityName="Amadeus Spital"/>
+					<!--	Kontaktdaten der Verantwortlichen Person für den Patientenkontakt	-->
+					<telecom use="WP" value="tel:+43.6138.3453446.2222"/>
+					<!--	Personendaten der Verantwortlichen Person für den Patientenkontakt	-->
+					<assignedPerson>
+						<!-- Name der Verantwortlichen Person für den Patientenkontakt -->
+						<name>
+							<prefix>Univ.-Prof.Dr.</prefix>
+							<given>Sigrid</given>
+							<family>Kollmann</family>
+						</name>
+					</assignedPerson>
+				</assignedEntity>
+			</responsibleParty>
+			<!--	Organisation, in deren Verantwortungsbereich der Patientenkontakt stattfand (siehe Allgemeiner Leitfaden, Kapitel 6.8.1.2.6)	-->
+			<location>
+				<healthCareFacility>
+					<code code="100" codeSystem="1.2.40.0.34.5.2" displayName="Ärztin/Arzt für Allgemeinmedizin"/>
+					<serviceProviderOrganization>
+						<!--	ID der Organisation aus dem GDA Index	-->
+						<id root="1.2.40.0.34.99.4613" assigningAuthorityName="GDA Index"/>
+						<!--	Name der Organisation	-->
+						<name>Amadeus Spital - Urologische Ambulanz</name>
+						<!-- 	Kontaktdaten der Organisation	-->
+						<telecom value="tel:+43.6138.3453446.0"/>
+						<telecom value="fax:+43.6138.3453446.4674"/>
+						<telecom value="mailto:info@amadeusspital.at"/>
+						<telecom value="http://www.amadeusspital.at"/>
+						<!--	Adresse der Organisation	-->
+						<addr>
+							<streetName>Mozartgasse</streetName>
+							<houseNumber>1-7</houseNumber>
+							<postalCode>5350</postalCode>
+							<city>St.Wolfgang</city>
+							<state>Salzburg</state>
+							<country>AUT</country>
+						</addr>
+					</serviceProviderOrganization>
+				</healthCareFacility>
+			</location>
+		</encompassingEncounter>
+	</componentOf>
+	<!--	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	Medizinische Inhalte "CDA Body"	siehe Allgemeiner Leitfaden, Kapitel 7	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************ 	-->
+	<component>
+		<!--	ELGA Interoperabilitätsstufe (EIS) "Full Support"	-->
+		<structuredBody>
+			<!--	=======================	=======================	=======================	Einleitende Sektionen	=======================	=======================	=======================	-->
+			<!--	*********************************************************************************	Brieftext	Siehe Allgemeiner Leitfaden, Kapitel 7.3.1	*********************************************************************************	-->
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.66" assigningAuthorityName="ELGA"/>
+					<code code="PAT_INFO_ADM" displayName="Weitere Patienteninformation - Administrativ" codeSystem="1.2.40.0.34.5.194" codeSystemName="EXNDS_Sections"/>
+					<title>Weitere Patienteninformation - Administrativ</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Eigenschaft</th>
+									<th>Wert</th>
+								</tr>
+
+							</thead>
+							<tbody>
+								<tr>
+									<td>Versicherten-Kategorie</td>
+									<td>Erwerbstätige</td>
+								</tr>
+								<tr>
+									<td>Beruf</td>
+									<td ID="BER">Arbeitslos</td>
+								</tr>
+								<tr>
+									<td>Rezeptgebührenbefreit</td>
+									<td>Nein</td>
+								</tr>
+								<tr>
+									<td>Entfernung in km</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>Bundeslandcode</td>
+									<td>1 - Wien</td>
+								</tr>
+								<tr>
+									<td>Erstzuweiser</td>
+									<td ID="ERSTZUW">Spontan - Suche über Internet</td>
+								</tr>
+							</tbody>
+						</table>												
+
+					</text>
+					<entry typeCode="DRIV">
+						<organizer classCode="BATTERY" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.63"/>
+							
+							<code code="PatInfoAdOrg" codeSystem="1.2.40.0.34.5.195" displayName="Patienteninformation Administrativ Organizer" codeSystemName="EXNDS_Concepts"/>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20200306110759"/>
+							</effectiveTime>
+							<component typeCode="COMP" contextConductionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.107"/>
+									
+									<code code="VKT" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts" displayName="Versichertenkategorie" />
+									
+									<value xsi:type="CD" code="VKT01" codeSystem="1.2.40.0.34.5.195"/>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.108"/>
+									
+									<code code="BER" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts" displayName="Beruf" />
+									
+									<value xsi:type="CD" nullFlavor="NA">
+										<originalText>
+											<reference value="#BER"/>
+										</originalText>
+									</value>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.109"/>
+									
+									<code code="RZG" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts" displayName="Rezeptgebührenbefreit" />
+									
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.110"/>
+									
+									<code code="EKM" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts" displayName="EntfernungInKM" />
+									
+									<value xsi:type="PQ" value="4" unit="km"/>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.111"/>
+									
+									<code code="BLD" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts" displayName="Bundeslandcode" />
+									
+									<value xsi:type="CD" code="BLD1" codeSystem="1.2.40.0.34.5.195"/>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.112"/>
+									
+									<code code="ERSTZUW" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts" displayName="Erstzuweiser" />
+									
+									<value xsi:type="CD" nullFlavor="NA">
+										<originalText>
+											<reference value="#ERSTZUW"/>
+										</originalText>
+									</value>
+								</observation>
+							</component>
+							
+						</organizer>
+					</entry>
+
+				</section>
+			</component>	
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.67"/>
+					<code code="PAT_INFO_MED" displayName="Weitere Patienteninformation - Medizinisch" codeSystem="1.2.40.0.34.5.194" codeSystemName="EXNDS_Sections"/>
+					<title>Weitere Patienteninformation - Medizinisch</title>
+					<text>temp</text>
+
+					<component typeCode="COMP">
+						<section>
+							<templateId root="1.2.40.0.34.6.0.11.2.46"/>
+							  <templateId root="2.16.840.1.113883.10.20.1.16"/>
+							  <!-- HL7 CCD -->
+							  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.25"/>
+							  <!-- IHE PCC -->
+							  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2"/>
+							  <!-- IHE PCC -->
+							  <!-- Code der Sektion -->
+							  <code code="8716-3" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							  <!-- Titel der Sektion -->
+							  
+							<title>Vitalparameter</title>
+							<text>
+								<table>
+									<thead>
+										<tr>
+											<th>Vitalparameterart</th>
+											<th>Wert</th>
+											<th>Einheit</th>
+											<th>Datum</th>
+										</tr>
+
+									</thead>
+									<tbody>
+										<tr ID="vitsig-1">
+											<td ID="vitsigtype-1">Körpergröße</td>
+											<td>182</td>
+											<td>cm</td>
+											<td>20.12.2018 1342</td>
+										</tr>
+										<tr ID="vitsig-2">
+											<td ID="vitsigtype-2">Körpergewicht</td>
+											<td>74,2</td>
+											<td>kg</td>
+											<td>20.12.2018 1340</td>
+										</tr>
+
+									</tbody>
+								</table>												
+
+							</text>
+							<entry typeCode="DRIV">
+								<organizer classCode="CLUSTER" moodCode="EVN">
+								  <!-- ELGA -->
+								  <templateId root="1.2.40.0.34.6.0.11.3.23"/>
+								  <!-- C-CDA Vital Signs Organizer -->
+								  <templateId root="2.16.840.1.113883.10.20.22.4.26" extension="2015-08-01"/>
+								  <!-- PHMR Vital Signs Organizer -->
+								  <templateId root="2.16.840.1.113883.10.20.36.2" extension="2015-11-19"/>
+								  <id root="1.2.99" extension="---example-only---"/>
+								  <code code="46680005" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+								  <statusCode code="completed"/>
+								  <effectiveTime>
+									<low value="20170721"/>
+									<high nullFlavor="UNK"/>
+								  </effectiveTime>
+								  <component>
+									<observation classCode="OBS" moodCode="EVN">
+									  <templateId root="1.2.40.0.34.6.0.11.3.24"/>
+									  <templateId root="2.16.840.1.113883.10.20.1.31"/>
+									  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2"/>
+									  <!-- ID des Vitalparameter-Entry -->
+									  <id root="1.2.99" extension="---example-only---"/>
+									  <!-- Code des Vitalparameter-Entry -->
+									  <code code="8302-2" displayName="Body height" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+										  <reference value="#vitsigtype-1"/>
+										</originalText>
+									  </code>
+									  <!-- Referenz zum narrativen Abschnitt dieses Vitalparameter-Entry im Text-Bereich der Sektion -->
+									  <text>
+										<reference value="#vitsig-1"/>
+									  </text>
+									  <!-- Statuscode des Vitalparameter-Entry -->
+									  <statusCode code="completed"/>
+									  <!-- Wert des Vitalparameter -->
+									  <value xsi:type="PQ" value="182" unit="cm"/>
+									</observation>
+								  </component>
+								  <component>
+									<observation classCode="OBS" moodCode="EVN">
+									  <templateId root="1.2.40.0.34.6.0.11.3.24"/>
+									  <templateId root="2.16.840.1.113883.10.20.1.31"/>
+									  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2"/>
+									  <!-- ID des Vitalparameter-Entry -->
+									  <id root="1.2.99" extension="---example-only---"/>
+									  <!-- Code des Vitalparameter-Entry -->
+									  <code code="3141-9" displayName="Body weight Measured" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+										  <reference value="#vitsigtype-2"/>
+										</originalText>
+									  </code>
+									  <!-- Referenz zum narrativen Abschnitt dieses Vitalparameter-Entry im Text-Bereich der Sektion -->
+									  <text>
+										<reference value="#vitsig-2"/>
+									  </text>
+									  <!-- Statuscode des Vitalparameter-Entry -->
+									  <statusCode code="completed"/>
+									  <!-- Wert des Vitalparameter -->
+									  <value xsi:type="PQ" value="74.2" unit="kg"/>
+									</observation>
+								  </component>
+								</organizer>
+							</entry>
+						</section>
+					</component>
+					<component typeCode="COMP">
+						<section>
+							<templateId root="1.2.40.0.34.6.0.11.2.31"/>
+							<code code="PAT_INFO_MED_MERK" displayName="Weitere Merkmale" codeSystem="1.2.40.0.34.5.194"  codeSystemName="EXNDS_Sections"/>
+							<title>Weitere Merkmale</title>
+							<text>
+								<table>
+									<thead>
+										<tr>
+											<th>Eigenschaft</th>
+											<th>Wert</th>
+										</tr>
+
+									</thead>
+									<tbody>
+										<tr>
+											<td>Blutgruppe</td>
+											<td>A</td>
+										</tr>
+										<tr>
+											<td>Rhesusfaktor</td>
+											<td>positiv</td>
+										</tr>
+										<tr>
+											<td>Besondere Kennzeichen/Hautfarbe</td>
+											<td ID="MERK1">-</td>
+										</tr>
+
+									</tbody>
+								</table>												
+
+							</text>
+							<entry typeCode="DRIV">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.65"/>
+									<code code="KOERPERLICHEMERKMALE" codeSystem="1.2.40.0.34.5.195" displayName="Körperliche Merkmale" codeSystemName="EXNDS_Concepts"/>
+									<statusCode code="completed"/>
+									
+									<component>
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.2.40.0.34.6.0.11.3.66"/>
+											<id root="1.2.3.999" extension="--example only--"/>
+											<code code="365637002" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" displayName="Finding of AB0 blood group"/>
+											
+											<value xsi:type="CD" code="112144000" codeSystem="2.16.840.1.113883.6.96" displayName="Blood group A (finding)"/>
+										</observation>
+									</component>
+									<component>
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.2.40.0.34.6.0.11.3.64"/>
+											<id root="1.2.3.999" extension="--example only--"/>
+											<code code="115758001" codeSystem="2.16.840.1.113883.6.96" displayName="Rh blood group phenotype (finding)" codeSystemName="SNOMED CT"/>
+											
+											<value xsi:type="CD" code="165747007" codeSystem="2.16.840.1.113883.6.96" displayName="RhD positive (finding)"/>
+										</observation>
+									</component>
+									<component>
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.2.40.0.34.6.0.11.3.113"/>
+											<id root="1.2.3.999" extension="--example only--"/>
+											<code code="BesKennzeichenHautfarbe" codeSystem="1.2.40.0.34.5.195" displayName="Besondere Kennzeichen / Hautfarbe" codeSystemName="EXNDS_Concepts"/>
+											
+											<value  xsi:type="CD" nullFlavor="NA">
+												<originalText>
+													<reference value="#MERK1"/>
+												</originalText>
+											</value>
+										</observation>
+									</component>
+								</organizer>
+							</entry>
+						</section>
+					</component>
+					
+				</section>
+			</component>
+			
+			<component> 
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.99"/>
+					<code code="51898-5"
+						codeSystem="2.16.840.1.113883.6.1"/>
+					<title>Wichtige Hinweise / CAVE</title>
+					<text>
+						<table>
+							
+							<tbody>
+								<tr>
+									<td ID="cave1">Patient beisst</td>
+									
+								</tr>
+								<tr>
+									<td ID="cave2">Patient spuckt</td>
+									
+								</tr>
+								
+							</tbody>
+						</table>				
+					</text>
+					<entry typeCode="DRIV">
+						<observation classCode="OBS" moodCode="EVN">
+						  <templateId root="1.2.40.0.34.6.0.11.2.100"/>
+						  <id root="1.2.3.999" extension="--example only--"/>
+						  <code code="80943009" codeSystem="2.16.840.1.113883.6.96" displayName="Risk factor (observable entity)" codeSystemName="SNOMED CT"/>
+						
+						  <value xsi:type="CD" nullFlavor="NA">
+							<originalText>
+								<reference value="#cave1"/>
+							</originalText>
+						  </value>
+						</observation>
+					</entry>
+					<entry typeCode="DRIV">
+						<observation classCode="OBS" moodCode="EVN">
+						  <templateId root="1.2.40.0.34.6.0.11.2.100"/>
+						  <id root="1.2.3.999" extension="--example only--"/>
+						  <code code="80943009" codeSystem="2.16.840.1.113883.6.96" displayName="Risk factor (observable entity)" codeSystemName="SNOMED CT"/>
+						 
+						  <value xsi:type="CD" nullFlavor="NA">
+							<originalText>
+								<reference value="#cave2"/>
+							</originalText>
+						  </value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			
+			<component>
+			  <section>
+				<templateId root="1.2.40.0.34.6.0.11.2.96"/>
+				<code code="439401001" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis" codeSystemName="SNOMED CT"/>
+				<title>Diagnose</title>
+				<text>
+					<table>
+						<thead>
+							<tr>
+								<th>Zeitraum oder Zeitpunkt</th>
+								<th>Diagnosetext</th>
+								<th>Code [Codesystem]</th>
+								<th>Diagnoseart</th>
+								<th>Kürzel</th>
+							</tr>
+							
+						</thead>
+						<tbody>
+							<tr ID="diagnose1">
+								<td>Seit Mai 1980</td>
+								<td ID="dia1">arterielle Hypertonie</td>
+								<td>I10.0 [ICD-10]</td>
+								<td>Dauerdiagnose</td>
+								<td>ahyp</td>
+								
+							</tr>
+							<tr ID ="diagnose2">
+								<td>25.6.2010</td>
+								<td ID="dia2">Bandscheibenvorfall</td>
+								<td>M50 [ICD-10]</td>
+								<td>Überweisungsdiagnose</td>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>	
+				</text>
+				<entry typeCode="DRIV">
+					<act classCode="ACT" moodCode="EVN">
+						<templateId root="1.2.40.0.34.6.0.11.3.7"/>
+						<templateId root="2.16.840.1.113883.10.20.1.27"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+						<id root="1.2.3.999" extension="--example only--"/>
+						<code nullFlavor="NA"/>
+						<statusCode code="active"/>
+						<effectiveTime>
+							<low value="198005"/>
+						</effectiveTime>
+						<entryRelationship typeCode="SUBJ" contextConductionInd="true" inversionInd="false">
+							<observation classCode="OBS" moodCode="EVN" negationInd="false">
+							  <templateId root="1.2.40.0.34.6.0.11.3.6"/>
+							  <templateId root="2.16.840.1.113883.10.20.1.28"/>
+							  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+							  <id root="1.2.3.999" extension="--example only--"/>
+							  <code code="64572001" codeSystem="2.16.840.1.113883.6.96" displayName="Condition">
+								<originalText>
+									<reference value="#dia1"/>
+								</originalText>
+							  </code>
+							  <text>
+								
+									<reference value="#diagnose1"/>
+								
+							  </text>
+							  <statusCode code="completed"/>
+							  <effectiveTime>
+								<low value="198005"/>
+							  </effectiveTime>
+							  <value xsi:type="CD" code="I10.0" codeSystem="1.2.40.0.34.5.184">
+								<originalText>
+									<reference value="#dia1"/>
+								</originalText>
+								
+								<qualifier>
+								  <name code="106229004" codeSystem="2.16.840.1.113883.6.96"/>
+								  <value code="6934004" displayName="Dauerdiagnose" codeSystem="2.16.840.1.113883.6.96"/>
+								</qualifier>
+							  </value>
+							  
+							 
+							</observation>
+						  </entryRelationship>
+						 
+					</act>
+				</entry>
+				
+				
+				<entry typeCode="DRIV">
+					<act classCode="ACT" moodCode="EVN">
+						<templateId root="1.2.40.0.34.6.0.11.3.7"/>
+						<templateId root="2.16.840.1.113883.10.20.1.27"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+						<id root="1.2.3.999" extension="-example only-"/>
+						<code nullFlavor="NA"/>
+						<statusCode code="active"/>
+						<effectiveTime>
+							<low value="20100625"/>
+						</effectiveTime>
+						<entryRelationship typeCode="SUBJ" contextConductionInd="true" inversionInd="false">
+							<observation classCode="OBS" moodCode="EVN" negationInd="false">
+							  <templateId root="1.2.40.0.34.6.0.11.3.6"/>
+							  <templateId root="2.16.840.1.113883.10.20.1.28"/>
+							  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+							  <id root="1.2.3.999" extension="-example only-"/>
+							  <code code="282291009" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis">
+								<originalText>
+									<reference value="#dia2"/>
+								</originalText>
+							  </code>
+							  <text>
+								
+									<reference value="#diagnose2"/>
+								
+							  </text>
+							  <statusCode code="completed"/>
+							  <effectiveTime>
+								<low value="20100625"/>
+							  </effectiveTime>
+							  <value xsi:type="CD" code="M50" codeSystem="1.2.40.0.34.5.184">
+								<originalText>
+									<reference value="#dia2"/>
+								</originalText>
+								
+								<qualifier>
+								  <name code="106229004" codeSystem="2.16.840.1.113883.6.96"/>
+								  <value code="406523004" displayName="Überweisungsdiagnose" codeSystem="2.16.840.1.113883.6.96"/>
+								</qualifier>
+							  </value>
+							  
+							 
+							</observation>
+						  </entryRelationship>
+						  
+					</act>
+				</entry>
+			  </section>
+			</component>
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.30"/>
+					<code code="416471007" displayName="Family history of clinical finding" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+					<title>Familienanamnese</title>
+					<text>Großmutter mütterlicher Seite, <content ID="fam1">Alzheimer Erkrankung (seit 1990)</content>
+					</text>
+					
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.115"/>
+							<id root="1.2.3.999" extension="--example only--"/>
+							<code nullFlavor="NA"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="19901001"/>
+								<high value="20201001"/>
+							</effectiveTime>
+							<subject>
+								<templateId root="1.2.40.0.34.6.0.11.3.116"/>
+								<relatedSubject classCode="PRS">
+									<code code="MGRMTH" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7RoleCode" displayName="maternal grandmother"/>
+									<subject>
+										<name>Hildegard Liebstöckl</name>
+									</subject>
+								</relatedSubject>
+							</subject>
+							<informant>
+								<assignedEntity>
+									<id root="1.2.40.0.34.99.4613.3.2" extension="36" assigningAuthorityName="Amadeus Spital"/>
+									<assignedPerson>
+										<name>
+											<prefix qualifier="AC">Dipl.Ing.</prefix>
+											<prefix qualifier="PR">Hofrat</prefix>
+											<given>Maximilian</given>
+											<family>TEST0000000036</family>
+											<family qualifier="BR">VorDerHeirat</family>
+											<suffix qualifier="AC">BSc</suffix>
+											<suffix qualifier="AC">MBA</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>	
+							</informant>
+							
+							<entryRelationship typeCode="SUBJ" contextConductionInd="true" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.6"/>
+									<templateId root="2.16.840.1.113883.10.20.1.28"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+									<id root="1.2.3.999" extension="--example only--"/>
+									 <code code="64572001" codeSystem="2.16.840.1.113883.6.96" displayName="Condition">
+										<originalText>
+											<reference value="#fam1"/>
+										</originalText>
+									  </code>
+									  <text>
+										<reference value="#fam1"/>
+									  </text>
+									  <statusCode code="completed"/>
+									  <effectiveTime>
+										<low value="199001"/>
+									  </effectiveTime>
+									  <value xsi:type="CD" code="F00.9*" codeSystem="1.2.40.0.34.5.184">
+										<originalText>
+											<reference value="#fam1"/>
+										</originalText>
+										
+										
+									  </value>
+								</observation>
+							</entryRelationship>
+						</act>
+							
+					</entry>
+
+				</section>
+			</component>	
+
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.32" assigningAuthorityName="ELGA"/>
+					<code code="BSCHEIN" displayName="Behandlungsschein" codeSystem="1.2.40.0.34.5.194" codeSystemName="EXNDS_Sections"/>
+					<title>Behandlungsschein</title>
+					<text>
+						<paragraph styleCode="Italics">Für jeden Behandlungsschein ist eine eigene Tabelle anzuführen</paragraph>
+						<br/>
+						<br/>
+						<paragraph styleCode="xELGA_h3">Behandlungsschein vom 05.01.2004</paragraph>
+						<table>
+
+							<tbody>
+								<tr>
+									<td>Scheinart</td>
+									<td>Überweisungsschein</td>
+								</tr>
+								<tr>
+									<td>Begründung</td>
+									<td ID="GRUND1">fachärztliche Untersuchung (1)</td>
+								</tr>
+								<tr>
+									<td>Abgabedatum</td>
+									<td>05.01.2004</td>
+								</tr>
+								<tr>
+									<td>Überweisungsdatum</td>
+									<td>05.01.2004</td>
+								</tr>
+								<tr>
+									<td>Schein- Zuweisender Arzt</td>
+									<td>831208</td>
+								</tr>
+
+								<tr>
+									<td>Zeitraum</td>
+									<td>10.3.2007 - 30.5.2007</td>
+								</tr>
+								<tr>
+									<td>Kassencode</td>
+									<td>WGKK</td>
+								</tr>
+								<tr>
+									<td>Fremdstaaten-Kennzeichen</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Dienstgeber</td>
+									<td ID="DIENST1">KMU Super, Wien</td>
+								</tr>
+								<tr>
+									<td>Saldo</td>
+									<td ID="SALDO1">74,99 Euro - Erstbehandlung</td>
+								</tr>
+								<tr>
+									<td>Fragestellung</td>
+									<td ID="FRAG1">Abklärung abdominale Beschwerden</td>
+								</tr>
+
+							</tbody>
+						</table>							
+
+					</text>
+				
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN" negationInd="false">
+						  <templateId root="1.2.40.0.34.6.0.11.3.117"/>
+						  <id root="1.2.3.999" extension="--example only--"/>
+						  <code code="BSART2" codeSystem="1.2.40.0.34.5.195" displayName="Überweisungsschein"/>
+						  <text>
+							<reference value="#FRAG1"/>
+						  </text>
+						  <effectiveTime>
+							<low value="20070310"/>
+							<high value="20070530"/>
+						  </effectiveTime>
+						  
+						  <participant typeCode="REF">
+							<templateId root="1.2.40.0.34.6.0.11.3.118"/>
+							<participantRole classCode="ROL">
+							  <id root="1.2.3.999" extension="831208"/>
+							  <addr>addr</addr>
+							  <telecom value="tel:+1-12345678"/>
+							  <playingEntity>
+								<name>Dr. Zuweiser</name>
+							  </playingEntity>
+							</participantRole>
+						  </participant>
+						  
+						  <participant typeCode="IND">
+							<templateId root="1.2.40.0.34.6.0.11.3.123"/>
+							<participantRole classCode="ROL">
+							  <code code="Dienstgeber" displayName="Dienstgeber" codeSystem="1.2.40.0.34.5.195" codeSystemName="EXNDS_Concepts">
+								<originalText>
+									<reference value="#DIENST1"/>
+								</originalText>
+							  </code>
+							  <addr>addr</addr>
+							  <telecom value="tel:+1-12345678"/>
+							  
+							</participantRole>
+						  </participant>
+						  
+						  <entryRelationship typeCode="COMP">
+							<observation classCode="OBS" moodCode="EVN" negationInd="false">
+							  <templateId root="1.2.40.0.34.6.0.11.3.119"/>
+							  <id root="1.2.3.999" extension="--example only--"/>
+							  <code code="GRUVU" codeSystem="1.2.40.0.34.5.195" displayName="Grund für Behandlungsschein" codeSystemName="EXNDS_Concepts"/>
+							  <text>
+								<reference value="#GRUND1"/>
+							  </text>
+							  <statusCode code="completed"/>
+							  <effectiveTime>
+								<low value="20040105"/>
+							  </effectiveTime>
+							  <value xsi:type="CD" code="GRUVU21" codeSystem="1.2.40.0.34.5.195" displayName="fachärztliche Untersuchung" />
+							</observation>
+						  </entryRelationship>
+						  
+						  <entryRelationship typeCode="COMP">
+							<observation classCode="OBS" moodCode="EVN" negationInd="false">
+							  <templateId root="1.2.40.0.34.6.0.11.3.122"/>
+							  <id root="1.2.3.999" extension="--example only--"/>
+							  <code code="Saldo" codeSystem="1.2.40.0.34.5.195" displayName="Saldo" codeSystemName="EXNDS_Concepts"/>
+							  <text>
+								<reference value="#SALDO1"/>
+							  </text>
+							  <statusCode code="completed"/>
+							  <value xsi:type="PQ" value="+74.99" unit="EUR"/>
+							</observation>
+						  </entryRelationship>
+						
+						  
+						</act>
+					</entry>
+				</section>
+			</component>
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.33"/>
+					<code code="55753-8" codeSystem="2.16.840.1.113883.6.1" displayName="Treatment information" codeSystemName="LOINC"/>
+					<title>Behandlungen</title>
+					<text>
+					<paragraph styleCode="Italics">Für jede Behandlung ist eine eigene Tabelle anzuführen</paragraph>
+						<br/>
+						<br/>
+						<paragraph styleCode="xELGA_h3">Behandlung vom 05.01.2004, 0933</paragraph>
+						<table>
+							<thead>
+								<tr>
+									<th>Eigenschaft</th>
+									<th>Wert</th>
+								</tr>
+
+							</thead>
+							<tbody>
+								<tr>
+									<td>Position</td>
+									<td>12</td>
+								</tr>
+								<tr>
+									<td>Anzahl</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>Begründung</td>
+									<td ID="BEG1">Rückenbeschwerden</td>
+								</tr>
+								<tr>
+									<td>Kassenleistung</td>
+									<td>Ja</td>
+								</tr>
+								<tr>
+									<td>Abrechnungskasse</td>
+									<td>Österreichische Gesundheitskasse</td>
+								</tr>
+								<tr>
+									<td>Therapie</td>
+									<td ID="THER1">Rückentraining (<content ID="THERK1">Rücktr</content>), <content ID="TARG1">Rücken</content></td>
+								</tr>
+								<tr ID="TAR1">
+									<td>Tarif</td>
+									<td>6,53€, Ordination, Kassen <br/>
+										<br/>(Hier können u.a. folgende Angaben getätigt werden<br/> Tariffelder, <br/>Text Position, <br/><content ID="REG1">Regiezuschlag 10 Euro</content>, <br/>Abrechnungs-Kennzeichen, <br/>Menge, <br/>Chefarzt-KZ, <br/>Visitenadresse)</td>
+								</tr>
+								<tr>
+									<td>Zuweisender Arzt (VPN)</td>
+									<td>Dr. Maria Markus (123456)</td>
+								</tr>
+								<tr>
+									<td>Zusatzkennzeichen</td>
+									<td ID="ZUS1">-</td>
+								</tr>
+
+
+							</tbody>
+						</table>
+						
+					</text>
+					<entry typeCode="DRIV">
+						<organizer classCode="BATTERY" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.67"/>
+							<id root="1.2.3.999" extension="--example only--"/>
+							<code code="Behandlungen" codeSystem="1.2.40.0.34.5.195" displayName="Behandlungen" codeSystemName="EXNDS_Concepts"/>
+							<statusCode code="completed"/>
+							<!-- Abbildung der ersten Behandlung-->
+							<component>
+									
+									<procedure classCode="PROC" moodCode="EVN">
+										<templateId root="1.2.40.0.34.6.0.11.3.130"/>
+										<id root="1.2.3.999" extension="--example only--"/>
+										<code code="277132007" codeSystem="2.16.840.1.113883.6.96" displayName="Therapeutic procedure (procedure)" codeSystemName="SNOMED CT"/>
+										<text>
+											<reference value="#BEG1"/>
+										</text>
+										<statusCode code="completed"/>
+										<effectiveTime>
+											<low value="20201006092124"/>
+										</effectiveTime>
+										<participant typeCode="IND">
+											<templateId root="1.2.40.0.34.6.0.11.3.131"/>
+											<participantRole classCode="ROL">
+												<playingEntity>
+													<code code="TherapieMenge" codeSystem="1.2.40.0.34.5.195" displayName="Therapie Menge" codeSystemName="EXNDS_Concepts"/>
+													<quantity value="1"/>
+												</playingEntity>
+											</participantRole>
+										</participant>
+										<entryRelationship typeCode="COMP">
+											<observation classCode="OBS" moodCode="EVN" negationInd="false">
+												<templateId root="1.2.40.0.34.6.0.11.3.126"/>
+												<id root="1.2.3.999" extension="--example only--"/>
+												<code code="Kassenleistung" codeSystem="1.2.40.0.34.5.195" displayName="Kassenleistung" codeSystemName="EXNDS_Concepts"/>
+												<statusCode code="completed"/>
+												<value xsi:type="CD" code="VSTRL11" codeSystem="1.2.40.0.34.5.195" displayName="Österreichische Gesundheitskasse"/>
+											</observation>
+										</entryRelationship>
+										<entryRelationship typeCode="COMP">
+											<procedure classCode="PROC" moodCode="EVN" negationInd="false">
+												<templateId root="1.2.40.0.34.6.0.11.3.124"/>
+												<id root="1.2.3.999" extension="--example only--"/>
+												<code code="276239002" codeSystem="2.16.840.1.113883.6.96" displayName="Therapy (regime/therapy)" codeSystemName="SNOMED CT">
+													<originalText>
+														<reference value="#THERK1"/>
+													</originalText>
+												</code>
+												<text>
+													<reference value="#THER1"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime>
+													<low value="20201002131242"/>
+												</effectiveTime>
+												<targetSiteCode nullFlavor="NA">
+													<originalText>
+														<reference value="#TARG1"/>
+													</originalText>
+												</targetSiteCode>
+												</procedure>
+										</entryRelationship>
+										<entryRelationship typeCode="COMP">
+											<act classCode="ACT" moodCode="EVN">
+												<templateId root="1.2.40.0.34.6.0.11.3.132"/>
+												<id root="1.2.3.999" extension="--example only--"/>
+												<code code="Tarif" codeSystem="1.2.40.0.34.5.195" displayName="Tarif" codeSystemName="EXNDS_Concepts"/>
+												<text>
+													<reference value="#TAR1"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime>
+													<low value="20201006093359"/>
+												</effectiveTime>
+												<participant typeCode="REF">
+													<templateId root="1.2.40.0.34.6.0.11.3.118"/>
+													<participantRole classCode="ROL">
+													  <id root="1.2.3.999" extension="831208"/>
+													  <addr>addr</addr>
+													  <telecom value="tel:+1-12345678"/>
+													  <playingEntity>
+														<name>Dr. Zuweiser</name>
+													  </playingEntity>
+													</participantRole>
+												</participant>
+												<entryRelationship typeCode="COMP">
+													<observation classCode="OBS" moodCode="EVN" negationInd="false">
+														<templateId root="1.2.40.0.34.6.0.11.3.125"/>
+														<id root="1.2.3.999" extension="--example only--"/>
+														<code code="RGZ" codeSystem="1.2.40.0.34.5.195" displayName="Regiezuschlag" codeSystemName="EXNDS_Concepts"/>
+														<text>
+															<reference value="#REG1"/>
+														</text>
+														<statusCode code="completed"/>
+														<value xsi:type="PQ" value="10.00" unit="EUR"/>
+													</observation>
+												</entryRelationship>
+												<entryRelationship typeCode="COMP">
+													<observation classCode="OBS" moodCode="EVN">
+														<templateId root="1.2.40.0.34.6.0.11.3.133"/>
+														<id root="1.2.3.999" extension="--example only--"/>
+														<code code="ABR" codeSystem="1.2.40.0.34.5.195" displayName="Abrechnungs-Kennzeichen" codeSystemName="EXNDS_Concepts"/>
+														
+														<value xsi:type="CD" code="ABR_o" codeSystem="1.2.40.0.34.5.195" displayName="offen"/>
+													</observation>
+												</entryRelationship>
+												<entryRelationship typeCode="COMP">
+													<observation classCode="OBS" moodCode="EVN" negationInd="false">
+														<templateId root="1.2.40.0.34.6.0.11.3.128"/>
+														<id root="1.2.3.999" extension="--example only--"/>
+														<code code="CHKZ" codeSystem="1.2.40.0.34.5.195" displayName="Chefarztkennzeichen" codeSystemName="EXNDS_Concepts"/>
+														<statusCode code="completed"/>
+														<value xsi:type="CD" code="CHKZ_J" codeSystem="1.2.40.0.34.5.195" displayName="ja">
+															
+														</value>
+													</observation>
+												</entryRelationship>
+												<entryRelationship typeCode="COMP">
+													<act classCode="ACT" moodCode="EVN" negationInd="false">
+														 <templateId root="1.2.40.0.34.6.0.11.3.129"/>
+															<id root="1.2.3.999" extension="--example only--"/>
+															<code code="Visiteninformation" codeSystem="1.2.40.0.34.5.195" displayName="Visiteninformation" codeSystemName="EXNDS_Concepts"/>
+															<participant typeCode="IND">
+																<participantRole classCode="ROL">
+																	<id root="1.2.3.999" extension="--example only--"/>
+																	<code code="Visitenadresse" codeSystem="1.2.40.0.34.5.195" displayName="Visitenadresse" codeSystemName="EXNDS_Concepts">
+																	
+																	</code>
+																		<addr use="WP">
+																			<streetName>Mozartgasse</streetName>
+																			<houseNumber>1-7/2/1</houseNumber>
+																			
+																			<postalCode>7000</postalCode>
+																			<city>Eisenstadt</city>
+																			<state>Burgenland</state>
+																			<country>AUT</country>
+																			<additionalLocator>Station A, Zimmer 9</additionalLocator>
+																		</addr>
+																	<telecom value="tel:+1-12345678"/>
+																</participantRole>
+															</participant>
+															<entryRelationship typeCode="COMP">
+																<observation classCode="OBS" moodCode="EVN">
+																	<templateId root="1.2.40.0.34.6.0.11.3.68"/>
+																	<id root="1.2.3.999" extension="--example only--"/>
+																	<code code="KMN" codeSystem="1.2.40.0.34.5.195" displayName="Visitenadresse-km Normal" codeSystemName="EXNDS_Concepts"/>
+																	
+																	<value xsi:type="PQ" value="12.5" unit="km"/>
+																</observation>
+															</entryRelationship>
+															<entryRelationship typeCode="COMP">
+																<observation classCode="OBS" moodCode="EVN">
+																	<templateId root="1.2.40.0.34.6.0.11.3.68"/>
+																	<id root="1.2.3.999" extension="--example only--"/>
+																	<code code="KMB" codeSystem="1.2.40.0.34.5.195" displayName="Visitenadresse-km Berg" codeSystemName="EXNDS_Concepts"/>
+																	
+																	<value xsi:type="PQ" value="2" unit="km"/>
+																</observation>
+															</entryRelationship>
+													</act>
+												</entryRelationship>
+												<entryRelationship typeCode="COMP">
+													<observation classCode="OBS" moodCode="EVN">
+														<templateId root="1.2.40.0.34.6.0.11.3.134"/>
+														<id root="1.2.3.999" extension="--example only--"/>
+														<code code="MNG" codeSystem="1.2.40.0.34.5.195" displayName="Tarif Menge" codeSystemName="EXNDS_Concepts"/>
+														<value xsi:type="INT" value="1"/>
+													</observation>
+												</entryRelationship>
+												<entryRelationship typeCode="COMP">
+													<observation classCode="OBS" moodCode="EVN">
+														<templateId root="1.2.40.0.34.6.0.11.3.135"/>
+														<id root="1.2.3.999" extension="--example only--"/>
+														<code code="Zusatzkennzeichen" codeSystem="1.2.40.0.34.5.195" displayName="Zusatzkennzeichen" codeSystemName="EXNDS_Concepts"/>
+														<value xsi:type="CD" nullFlavor="NA">
+															<originalText>
+																<reference value="#ZUS1"/>
+															</originalText>
+														</value>
+													</observation>
+												</entryRelationship>
+											</act>
+										</entryRelationship>
+										
+									</procedure>
+							</component>
+							<!-- Ende der Ersten Behandlung -->
+						</organizer>
+					</entry>
+				</section>
+			</component>
+
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.34"/>
+					<code code="KARTEI_EINTRAGUNGEN" codeSystem="1.2.40.0.34.5.194" displayName="Karteineintragungen" codeSystemName="EXNDS_Sections"/>
+					<title>Karteineintragungen</title>
+					
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Zeilennummer</th>
+									<th>Text</th>
+								</tr>
+
+							</thead>
+							<tbody>
+
+								<tr >
+									<td>1</td>
+									<td ID="KART_1">GW 1/2004 ÜW</td>
+
+								</tr>
+								<tr >
+									<td>2</td>
+									<td ID="KART_2">Otitis</td>
+
+								</tr>
+								<tr >
+									<td>3</td>
+									<td ID="KART_3">Eintrag Nummer 3</td>
+
+								</tr>
+								<tr >
+									<td>4</td>
+									<td ID="KART_4">Eintrag Nummer 4</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<organizer classCode="BATTERY" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.137"/>
+							<id root="1.2.3.999" extension="--example only--"/>
+							<code code="Karteieintragungen" codeSystem="1.2.40.0.34.5.195" displayName="Karteieintragungen" codeSystemName="EXNDS_Concepts"/>
+							<statusCode code="completed"/>
+							<effectiveTime>
+							<low value="20201006114808"/>
+							</effectiveTime>
+							<component typeCode="COMP" contextConductionInd="true">
+								
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.136"/>
+									<id root="1.2.3.999" extension="--example only--"/>
+									<code code="Karteineintrag" codeSystem="1.2.40.0.34.5.195" displayName="Karteineintrag" codeSystemName="EXNDS_Concepts"/>
+									<text>
+										<reference value="#KART1"/>
+									</text>
+									
+									<effectiveTime>
+									<low value="20201006113228"/>
+									</effectiveTime>
+									<value xsi:type="INT" value="1"/>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.136"/>
+									<id root="1.2.3.999" extension="--example only--"/>
+									<code code="Karteineintrag" codeSystem="1.2.40.0.34.5.195" displayName="Karteineintrag" codeSystemName="EXNDS_Concepts"/>
+									<text>
+										<reference value="#KART2"/>
+									</text>
+									
+									<effectiveTime>
+									<low value="20201006113228"/>
+									</effectiveTime>
+									<value xsi:type="INT" value="2"/>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.136"/>
+									<id root="1.2.3.999" extension="--example only--"/>
+									<code code="Karteineintrag" codeSystem="1.2.40.0.34.5.195" displayName="Karteineintrag" codeSystemName="EXNDS_Concepts"/>
+									<text>
+										<reference value="#KART3"/>
+									</text>
+									
+									<effectiveTime>
+									<low value="20201006113228"/>
+									</effectiveTime>
+									<value xsi:type="INT" value="3"/>
+								</observation>
+							</component>
+							<component typeCode="COMP" contextConductionInd="true">
+								
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.136"/>
+									<id root="1.2.3.999" extension="--example only--"/>
+									<code code="Karteineintrag" codeSystem="1.2.40.0.34.5.195" displayName="Karteineintrag" codeSystemName="EXNDS_Concepts"/>
+									<text>
+										<reference value="#KART4"/>
+									</text>
+									
+									<effectiveTime>
+									<low value="20201006113228"/>
+									</effectiveTime>
+									<value xsi:type="INT" value="4"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			
+			<component typeCode="COMP">
+				<section classCode="DOCSECT">
+					<templateId root="1.2.40.0.34.6.0.11.2.104"/>
+					<code code="LabSpecContainer" codeSystem="1.2.40.0.34.5.194" displayName="Laboratory Speciality Container" codeSystemName="EXNDS_Sections"/>
+					<title>Laborparameter</title>				
+					<component typeCode="COMP">
+						<section classCode="DOCSECT">
+							<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+							<id extension="P-body" root="2.16.840.1.113883.3.933.1.1"/>
+							<code code="300" codeSystem="1.2.40.0.34.5.11"
+								codeSystemName="ELGA_LaborparameterErgaenzung" displayName="Hämatologie"/>
+							<title>Hämatologie</title>
+							<!-- Start level 2 -->
+							<text>
+								<!-- 
+									Tabelle Blutbild
+								-->
+								<paragraph styleCode="xELGA_h3">Blutbild</paragraph>
+								<table>
+									<thead>
+										<tr>
+											<th styleCode="xELGA_colw40">Analyse</th>
+											<th>Ergebnis</th>
+											<th>Einheit</th>
+											<th>Referenzbereiche</th>
+											<th styleCode="xELGA_colw10">Interpretation</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ID="OBS-1-1" styleCode="xELGA_red">
+											<td>Leukozyten</td>
+											<td>26</td>
+											<td>10^9/L</td>
+											<td ID="OBSREF-1-1">4-10</td>
+											<td>+</td>
+										</tr>
+										<tr ID="OBS-1-2">
+											<td>Thrombozyten</td>
+											<td>165</td>
+											<td>10^9/L</td>
+											<td ID="OBSREF-1-2">150-360</td>
+											<td/>
+										</tr>
+										<tr ID="OBS-1-3">
+											<td>Erythrozyten</td>
+											<td>5.39</td>
+											<td>10^12/L</td>
+											<td ID="OBSREF-1-3">4.60-6.20</td>
+											<td/>
+
+										</tr>
+										<tr ID="OBS-1-4">
+											<td>Hämoglobin</td>
+											<td>16.0</td>
+											<td>g/dl</td>
+											<td ID="OBSREF-1-4">14.0-18.0</td>
+											<td/>
+										</tr>
+										<tr ID="OBS-1-5" styleCode="xELGA_red">
+											<td>Hämatokrit</td>
+											<td>49.7</td>
+											<td>%</td>
+											<td ID="OBSREF-1-5">43.0-49.0</td>
+											<td>+</td>
+										</tr>
+										<tr ID="OBS-1-6">
+											<td>MCH</td>
+											<td>29.7</td>
+											<td>pg</td>
+											<td ID="OBSREF-1-6">27.0-33.0</td>
+											<td/>
+
+										</tr>
+										<tr ID="OBS-1-7">
+											<td>MCV</td>
+											<td>92.2</td>
+											<td>fl</td>
+											<td ID="OBSREF-1-7">85.0-95.0</td>
+											<td/>
+
+										</tr>
+										<tr ID="OBS-1-8">
+											<td>MCHC</td>
+											<td>32.2</td>
+											<td>g/dl</td>
+											<td ID="OBSREF-1-8">28.0-33.0</td>
+											<td/>
+										</tr>
+										<tr ID="OBS-1-12">
+											<td>Akt.Lymphoz.rel.mi.</td>
+											<td>7</td>
+											<td>%</td>
+											<td ID="OBSREF-1-12">0-10</td>
+											<td/>
+										</tr>
+
+									</tbody>
+								</table>
+								
+							</text>
+
+
+							<!-- 
+								Ende Level 2
+								Start Level 3
+								Anmerkung Der Beispielbefund ist auszugsweise Level 3 codiert 
+							-->
+							<entry typeCode="DRIV">
+								<templateId root="1.3.6.1.4.1.19376.1.3.1"
+									extension="Lab.Report.Data.Processing.Entry"/>
+								<act classCode="ACT" moodCode="EVN">
+									<code code="300" codeSystem="1.2.40.0.34.5.11"
+										codeSystemName="ELGA_LaborparameterErgaenzung"
+										displayName="Hämatologie"/>
+									<statusCode code="completed"/>
+
+
+									
+
+									<!-- Haematologie -->
+
+									<entryRelationship typeCode="COMP">
+										<organizer classCode="BATTERY" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+											<code code="03010" codeSystem="1.2.40.0.34.5.11"
+												codeSystemName="ELGA_LaborparameterErgaenzung"
+												displayName="Blutbild"/>
+											<statusCode code="completed"/>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-1"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="26464-8" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="Leukozyten"/>
+
+													<text>
+														<reference value="#OBS-1-1"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													
+													<value unit="10*9/L" value="26" xsi:type="PQ"/>
+													<interpretationCode code="H"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="High"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-1"/></text>
+														<value xsi:type="IVL_PQ">
+															<low value="4.0" unit="10*9/L"/>
+															<high value="10.0" unit="10*9/L"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-2"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="26515-7" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="Thrombozyten"/>
+													<text>
+														<reference value="#OBS-1-2"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="10*9/L" value="165" xsi:type="PQ"/>
+													<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-2"/></text>
+														<value xsi:type="IVL_PQ">
+															<low value="150" unit="10*9/L"/>
+															<high value="360" unit="10*9/L"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-3"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="26453-1" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="Erythrozyten"/>
+
+													<text>
+														<reference value="#OBS-1-3"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="10*12/L" value="5.39" xsi:type="PQ"/>
+													<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-3"/></text>
+														<value xsi:type="IVL_PQ">
+															<low value="4.6" unit="10*12/L"/>
+															<high value="6.2" unit="10*12/L"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-4"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="718-7" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="Hämoglobin"/>
+
+													<text>
+														<reference value="#OBS-1-4"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="g/dL" value="16.0" xsi:type="PQ"/>
+													<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-4"/></text>
+														<value xsi:type="IVL_PQ">
+														<low value="14.0" unit="g/dL"/>
+														<high value="18.0" unit="g/dL"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-5"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="20570-8" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="Hämatokrit"/>
+													<text>
+														<reference value="#OBS-1-5"/>
+													</text>
+													<statusCode code="completed"/>
+													<!-- Physiologische Zeit der Analyse -->
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="%" value="49.7" xsi:type="PQ"/>
+													<interpretationCode code="H"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="High"/>
+													<!-- Template für Validator <templateId root="1.3.6.1.4.1.19376.1.3.3.1.5"/> -->
+													<participant typeCode="AUTHEN">
+														<templateId root="1.3.6.1.4.1.19376.1.3.3.1.5"/>
+														<time value="20160123211000+0100"/>
+														<participantRole>
+														<id extension="332" root="1.3.6.1.4.1.19376.1.3.4"/>
+														<addr nullFlavor="NA"/>
+														<telecom value="tel:312-555-5555"/>
+														<playingEntity>
+														<name>
+														<given>Franz</given>
+														<family>Schmid</family>
+														</name>
+														</playingEntity>
+														</participantRole>
+													</participant>
+													<!-- Referenzbereich (normale Werte = N) -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-5"/></text>
+														<value xsi:type="IVL_PQ">
+														<low value="43.0" unit="%"/>
+														<high value="49.0" unit="%"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-6"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="28539-5" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="MCH"/>
+
+													<text>
+														<reference value="#OBS-1-6"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="pg" value="29.7" xsi:type="PQ"/>
+													<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-6"/></text>
+														<value xsi:type="IVL_PQ">
+														<low value="27.0" unit="pg"/>
+														<high value="33.0" unit="pg"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-7"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="30428-7" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="MCV"/>
+
+													<text>
+														<reference value="#OBS-1-7"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="fL" value="92.2" xsi:type="PQ"/>
+													<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-7"/></text>
+														<value xsi:type="IVL_PQ">
+														<low value="85.0" unit="fL"/>
+														<high value="95.0" unit="fL"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-8"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="28540-3" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC" displayName="MCHC"/>
+
+													<text>
+														<reference value="#OBS-1-8"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="g/dL" value="32.2" xsi:type="PQ"/>
+													<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-8"/></text>
+														<value xsi:type="IVL_PQ">
+														<low value="28.0" unit="g/dL"/>
+														<high value="33.0" unit="g/dL"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<!-- Analyse mit V-Code-->
+											<component typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+													<id extension="OBS-1-12"
+														root="1.2.40.0.34.99.4613.122082.1.3.5"/>
+													<code code="V00042" codeSystem="1.2.40.0.34.5.11"
+														codeSystemName="ELGA_LaborparameterErgaenzung"
+														displayName="Akt.Lymphoz.rel.mi."/>
+													<text>
+														<reference value="#OBS-1-12"/>
+													</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20161201073406+0100"/>
+													<value unit="%" value="7" xsi:type="PQ"/>
+													<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+													<!-- Referenzbereich -->
+													<referenceRange typeCode="REFV">
+														<observationRange classCode="OBS" moodCode="EVN.CRT">
+														<!-- text Referenzbereich unter Vorbedingungen -->
+														<text><reference value="#OBSREF-1-12"/></text>
+														<value xsi:type="IVL_PQ">
+														<low value="0" unit="%"/>
+														<high value="10" unit="%"/>
+														</value>
+														<interpretationCode code="N"
+														codeSystemName="HL7ObservationInterpretation"
+														codeSystem="2.16.840.1.113883.5.83"
+														displayName="normal"/>
+														</observationRange>
+													</referenceRange>
+												</observation>
+											</component>
+											<component typeCode="COMP">
+												<act classCode="ACT" moodCode="EVN">
+													<templateId root="1.2.40.0.34.11.4.3.2"/>
+													<templateId root="2.16.840.1.113883.10.20.1.40"/>
+													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
+														codeSystemName="LOINC"
+														displayName="Annotation Comment"/>
+													<text>
+														<reference value="#haematologyComment"/>
+													</text>
+													<statusCode code="completed"/>
+												</act>
+											</component>
+										</organizer>
+									</entryRelationship>
+								</act>
+							</entry>
+						</section>
+					
+					</component>
+				</section> 	
+			</component>
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.101"/>
+					<templateId root="1.2.40.0.34.11.8.1.2.1" assigningAuthorityName="ELGA"/>
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.1" assigningAuthorityName="IHE PHARM"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19" assigningAuthorityName="IHE PCC"/>
+					<templateId root="2.16.840.1.113883.10.20.1.8" assigningAuthorityName="HL7 CCD"/>
+					<id root="1.2.40.0.10.1.4.3.4.2.1" extension="WYE82A2G8EEW" assigningAuthorityName="e-MedAT"/>
+					<code code="57828-6" displayName="Prescription list" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Rezept</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Rezeptart</th>
+									<th>Gültig von</th>
+									<th>Gültig bis</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Kassenrezept</td>
+									<td>2013-03-26</td>
+									<td>2014-04-27</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<table ID="vpos-1">
+							<tbody>
+								<tr>
+									<td>Verordnung</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>VerordnungsID</td>
+									<td>1.2.40.0.10.1.4.3.4.2.2 / WYE82A2G8EEW_4711</td>
+								</tr>
+								<tr>
+									<td>Arznei Bezeichnung</td>
+									<td>Ciproxin 500mg Tabletten</td>
+								</tr>
+								<tr>
+									<td>Arznei Pharmazentralnummer</td>
+									<td>
+										<content ID="prodcode-1">981417</content>
+									</td>
+								</tr>
+								<tr>
+									<td>Arznei Zulassungsnummer</td>
+									<td>1-18296</td>
+								</tr>
+								<tr>
+									<td>Arznei Darreichungsform</td>
+									<td>Filmtablette</td>
+								</tr>
+								<tr>
+									<td>Arznei Angaben zur Packung</td>
+									<td>30 Einheiten</td>
+								</tr>
+								<tr>
+									<td>Arznei Wirkstoffname (ATC Code)</td>
+									<td>Ciprofloxacin (J01MA02)</td>
+								</tr>
+								<tr>
+									<td>Einnahmestart</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>Einnahmeende</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>Einnahmedauer</td>
+									<td>2 Wochen</td>
+								</tr>
+								<tr>
+									<td>Dosierung</td>
+									<td>2 - 0 - 1 - 0, täglich</td>
+								</tr>
+								<tr>
+									<td>Art der Anwendung</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>Therapieart</td>
+									<td>Einzelverordnung</td>
+								</tr>
+								<tr>
+									<td>Anzahl der Einlösungen</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>Anzahl der Packungen</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>Zusatzinformationen für den Patienten und alternative Einnahme</td>
+									<td>
+										<content ID="patinfo-1">
+											<content ID="zinfo-1">
+												Dosierung genau einhalten!
+											</content>
+											<content ID="altein-1">
+												Alternativ Tablette in Wasser auflösen
+											</content>
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>Ergänzende Informationen zu magistralen Zubereitungen</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>Packungsart</td>
+									<td>Originalpackung</td>
+								</tr>
+								<tr>
+									<td>TAX Preis</td>
+									<td>19.90 EUR inkl 20%MWST</td>
+								</tr>
+								<tr>
+									<td>Apotheken-Verkaufspreis Preis</td>
+									<td>21.00 EUR inkl 20%MWST</td>
+								</tr>
+								<tr>
+									<td>Magistraler Bestandteil</td>
+									<td><content ID="MAGISTR1">Fettcreme</content> Kosten 3.45 EURO inkl. 20%MWST</td>
+								</tr>
+								<tr>
+									<td>Bezahlt</td>
+									<td>Ja</td>
+								</tr>
+								<tr>
+									<td>Rezeptgebührenbefreit</td>
+									<td>nein</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="INT">
+							<templateId root="1.2.40.0.34.11.8.1.3.1" assigningAuthorityName="ELGA"/>
+							<templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="HL7 CCD"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC"/>
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.2" assigningAuthorityName="IHE PHARM"/>
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.6" assigningAuthorityName="IHE PHARM"/>
+							<!-- PCC template ID für „Delay Start dosing“ -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.21" assigningAuthorityName="IHE PCC"/>
+							<!-- Dosierungsart 2, „Split dosing“ -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" assigningAuthorityName="IHE PCC"/>
+							<id root="1.2.40.0.10.1.4.3.4.2.2" extension="WYE82A2G8EEW_4711" assigningAuthorityName="Ordination Dr. Meier"/>
+							<text>
+								<reference value="#vpos-1"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<!-- Einnahme 2 Wochen lang -->
+								<width value="2" unit="wk"/>
+							</effectiveTime>
+							<!-- Nur einmalige Einlösung erlaubt -->
+							<repeatNumber value="0"/>
+							<consumable>
+								<manufacturedProduct xmlnspharm="urnihepharmmedication" classCode="MANU">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53" assigningAuthorityName="HL7 CCD"/>
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<!-- ELGA Arznei-Entry -->
+										<templateId root="1.2.40.0.34.11.2.3.4" assigningAuthorityName="ELGA"/>
+										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" assigningAuthorityName="IHE PHARM"/>
+										<code code="981417" displayName="CIPROXIN FTBL 500MG" codeSystem="1.2.40.0.34.4.16" codeSystemName="Pharmazentralnummer">
+											<originalText>
+												<reference value="#prodcode-1"/>
+											</originalText>
+										</code>
+										<name>Ciproxin 500mg</name>
+										<pharm:formCode code="100000073665" displayName="Filmtablette" codeSystem="1.2.40.0.10.1.4.3.4.3.5" codeSystemName="MedikationDarreichungsform"/>
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedMedicine classCode="CONT" determinerCode="INSTANCE">
+												<!-- Packungsgröße 30 Stk -->
+												<pharm:capacityQuantity value="30"/>
+											</pharm:containerPackagedMedicine>
+										</pharm:asContent>
+										<pharm:ingredient classCode="ACTI">
+											<pharm:ingredient classCode="MMAT" determinerCode="KIND">
+												<pharm:code code="J01MA02" displayName="Ciprofloxacin" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO"/>
+												<pharm:name>Ciprofloxacin</pharm:name>
+											</pharm:ingredient>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<!--
+								 ********** Dosierungsart 2 Anfang **********
+								 Im Falle von Dosierungsart 2 und 4 („Split dosing“) werden die
+								 Einnahmezeitpunkte + Dosis in Form von untergeordneten
+								 entryRelationship Elementen angegeben (Morgens, Mittags, ...)
+						
+								 Dosierungsart 2 Einzeldosierung
+								 Morgens – Mittags – Abends - Nachts
+									2    -    0    -    1   -   0
+							-->
+							<entryRelationship typeCode="COMP">
+								<!-- Einnahme MORGENS, 2 Stück -->
+								<sequenceNumber value="1"/>
+								<substanceAdministration classCode="SBADM" moodCode="INT">
+									<effectiveTime xsi:type="EIVL_TS">
+										<event code="ACM"/>
+										<offset value="0" unit="s"/>
+									</effectiveTime>
+									<doseQuantity value="2"/>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor="NA"/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<!-- Einnahme ABENDS, 1 Stück -->
+								<sequenceNumber value="2"/>
+								<substanceAdministration classCode="SBADM" moodCode="INT">
+									<effectiveTime xsi:type="EIVL_TS">
+										<event code="ACV"/>
+										<offset value="0" unit="s"/>
+									</effectiveTime>
+									<doseQuantity value="1"/>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor="NA"/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<!-- ********** Dosierungsart 2 Ende ********** -->
+							<entryRelationship typeCode="COMP">
+								<supply classCode="SPLY" moodCode="RQO">
+									<independentInd value="false"/>
+									<!-- 1 Packung abzugeben -->
+									<quantity value="1"/>
+								</supply>
+							</entryRelationship>
+							<!-- Zusatzinformation für den Patienten und alternative Einnahme  -->
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<act classCode="ACT" moodCode="INT">
+									<templateId root="2.16.840.1.113883.10.20.1.49" assigningAuthorityName="HL7 CCD"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.3" assigningAuthorityName="IHE PCC"/>
+									<code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode"/>
+									<text>
+										<reference value="#patinfo-1"/>
+									</text>
+									<statusCode code="completed"/>
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<act classCode="ACT" moodCode="INT">
+											<templateId root="1.2.40.0.34.11.8.0.3.1" assigningAuthorityName="ELGA"/>
+											<code code="ZINFO" codeSystem="1.2.40.0.34.5.103" codeSystemName="ELGA_ActCode"/>
+											<text>
+												<reference value="#zinfo-1"/>
+											</text>
+											<statusCode code="completed"/>
+										</act>
+									</entryRelationship>
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<act classCode="ACT" moodCode="INT">
+											<templateId root="1.2.40.0.34.11.8.0.3.1" assigningAuthorityName="ELGA"/>
+											<code code="ALTEIN" codeSystem="1.2.40.0.34.5.103" codeSystemName="ELGA_ActCode"/>
+											<text>
+												<reference value="#altein-1"/>
+											</text>
+											<statusCode code="completed"/>
+										</act>
+									</entryRelationship>
+								</act>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<organizer classCode="BATTERY" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.143"/>
+							<id root="1.2.40.0.10.1.4.3.4.2.2" extension="WYE82A2G8EEW_4711" assigningAuthorityName="Ordination Dr. Meier"/>
+							<code code="ArnMittelOrganizer" codeSystem="1.2.40.0.34.5.195" displayName="Arzneimittel-Organizer"/>
+							<statusCode code="completed"/>
+							<component typeCode="COMP" contextConductionInd="true">
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.140"/>
+									<code code="ArzMittelPreisTAX" codeSystem="1.2.40.0.34.5.195" displayName="TAX-Preis des Arzneimittels"/>
+									<value xsi:type="PQ" value="19.99" unit="EUR"/>
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN" negationInd="false">
+											<templateId root="1.2.40.0.34.6.0.11.3.142"/>
+											<code code="MWST" codeSystem="1.2.40.0.34.5.195" displayName="Mehrwertsteuersatz"/>
+											<value xsi:type="PQ" value="20" unit="[%]"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.141"/>
+									<code code="ArzMittelPreisApo" codeSystem="1.2.40.0.34.5.195" displayName="Apotheken-Verkaufspreis des Arzneimittels"/>
+									<value xsi:type="PQ" value="21.00" unit="EUR"/>
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN" negationInd="false">
+											<templateId root="1.2.40.0.34.6.0.11.3.142"/>
+											<code code="MWST" codeSystem="1.2.40.0.34.5.195" displayName="Mehrwertsteuersatz"/>
+											<value xsi:type="PQ" value="20" unit="[%]"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.144"/>
+									<code code="ArnMittelPackArt" codeSystem="1.2.40.0.34.5.195" displayName="Arzneimittelpakungsart"/>
+									<value xsi:type="CD" code="ArnMittelPackArt_OP" codeSystem="1.2.40.0.34.5.195" displayName="Originalpackung"/>
+								</observation>
+							</component>
+							<component>
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.146"/>
+									<id root="1.2.3.999" extension="--example only--"/>
+									<code code="ArnMittelMagOrganizer" codeSystem="1.2.40.0.34.5.195" displayName="Organizer für magistrale Zubereitungen"/>
+									<statusCode code="completed"/>
+									<component typeCode="COMP" contextConductionInd="true">
+										<observation classCode="OBS" moodCode="EVN" negationInd="false">
+											<templateId root="1.2.40.0.34.6.0.11.3.140"/>
+											<code code="ArzMittelPreisTAX" codeSystem="1.2.40.0.34.5.195" displayName="TAX-Preis des Arzneimittels"/>
+											<value xsi:type="PQ" value="3.45" unit="EUR"/>
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN" negationInd="false">
+													<templateId root="1.2.40.0.34.6.0.11.3.142"/>
+													<code code="MWST" codeSystem="1.2.40.0.34.5.195" displayName="Mehrwertsteuersatz"/>
+													<value xsi:type="PQ" value="20" unit="[%]"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</component>
+									<component>
+										<observation classCode="OBS" moodCode="EVN" negationInd="false">
+											<templateId root="1.2.40.0.34.6.0.11.3.147"/>
+											<code code="ArnMittelMagBest" codeSystem="1.2.40.0.34.5.195" displayName="Bestandteil einer magistralen Zubereiten"/>
+											<value xsi:type="ED">
+												
+													<reference value="#MAGISTR1"/>
+												
+											</value>
+										</observation>
+									</component>
+								</organizer>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.148"/>
+									<code code="ArnMittelBez" codeSystem="1.2.40.0.34.5.195" displayName="Arzneimittel Bezahlt"/>
+									<value xsi:type="BL" value="true"/>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="1.2.40.0.34.6.0.11.3.149"/>
+									<code code="ArnMittelRezGebFrei" codeSystem="1.2.40.0.34.5.195" displayName="Arzneimittel rezeptgebührenbefreit"/>
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			
+			<!-- Angabe über Impfungen -->
+			<!-- template 1.2.40.0.34.6.0.11.2.1 "Impfungen - kodiert" laut eImpfpass-->
+			
+			
+			<!-- Angabe zu Impfempfehlungen -->
+			<!-- template 1.2.40.0.34.6.0.11.2.2 "Impfempfehlungen - kodiert" laut eImpfpass -->
+			
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.40"/>
+					<code code="BEFUNDE" codeSystem="1.2.40.0.34.5.194" displayName="Befunde" codeSystemName="EXNDS_Sections"/>
+					<title>Befunde</title>
+					<text>
+						<paragraph styleCode="xELGA_h3">Befund vom XX.XX.XXXX</paragraph>
+						<table>
+							<thead>
+								<tr>
+									<th>Zeilennummer</th>
+									<th>Text</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td ID="BEF1">Befund (XX.XX.XXXX)</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td ID="BEF2">Migräne</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td ID="BEF3">Dif diag Spannungskopfschmerz</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<br/>
+						<br/>
+						<paragraph styleCode="xELGA_h3">Befund vom XX.XX.XXXX</paragraph>
+						Laborbefund vom XX.XX.XXXX als PDF beigelegt
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.150"/>
+							<code code="BefundKartEintrag" codeSystem="1.2.40.0.34.5.195" displayName="Befund Karteieintrages"/>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.137"/>
+									<id root="1.2.3.999" extension="-example only-"/>
+									<code code="Karteieintragungen" codeSystem="1.2.40.0.34.5.195" displayName="Karteieintragungen" codeSystemName="EXNDS_Concepts"/>
+									<statusCode code="completed"/>
+									<effectiveTime>
+									<low value="20201006114808"/>
+									</effectiveTime>
+									<component typeCode="COMP" contextConductionInd="true">
+										
+										
+										<observation classCode="OBS" moodCode="EVN" negationInd="false">
+											<templateId root="1.2.40.0.34.6.0.11.3.136"/>
+											<id root="1.2.3.999" extension="-example only-"/>
+											<code code="Karteineintrag" codeSystem="1.2.40.0.34.5.195" displayName="Karteineintrag" codeSystemName="EXNDS_Concepts"/>
+											<text>
+												<reference value="#BEF1"/>
+											</text>
+											
+											<effectiveTime>
+											<low value="20201006113228"/>
+											</effectiveTime>
+											<value xsi:type="INT" value="1"/>
+										</observation>
+									</component>
+									<component typeCode="COMP" contextConductionInd="true">
+										
+										
+										<observation classCode="OBS" moodCode="EVN" negationInd="false">
+											<templateId root="1.2.40.0.34.6.0.11.3.136"/>
+											<id root="1.2.3.999" extension="-example only-"/>
+											<code code="Karteineintrag" codeSystem="1.2.40.0.34.5.195" displayName="Karteineintrag" codeSystemName="EXNDS_Concepts"/>
+											<text>
+												<reference value="#BEF2"/>
+											</text>
+											
+											<effectiveTime>
+											<low value="20201006113228"/>
+											</effectiveTime>
+											<value xsi:type="INT" value="2"/>
+										</observation>
+									</component>
+									<component typeCode="COMP" contextConductionInd="true">
+										
+										
+										<observation classCode="OBS" moodCode="EVN" negationInd="false">
+											<templateId root="1.2.40.0.34.6.0.11.3.136"/>
+											<id root="1.2.3.999" extension="-example only-"/>
+											<code code="Karteineintrag" codeSystem="1.2.40.0.34.5.195" displayName="Karteineintrag" codeSystemName="EXNDS_Concepts"/>
+											<text>
+												<reference value="#BEF3"/>
+											</text>
+											
+											<effectiveTime>
+											<low value="20201006113228"/>
+											</effectiveTime>
+											<value xsi:type="INT" value="3"/>
+										</observation>
+									</component>
+									
+								</organizer>
+							</entryRelationship>
+							
+						</act>
+					</entry>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.150"/>
+							<code code="BefundDokument" codeSystem="1.2.40.0.34.5.195" displayName="Befund Dokument" codeSystemName="EXNDS_Sections"/>
+							<reference typeCode="REFR">
+								<externalDocument>
+									<templateId root="1.2.40.0.34.6.0.11.3.151"/>
+									<id root="2.5.4.83" extension="file///Laborbefund.pdf"/>
+									<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Laboratory report"/>
+								
+								</externalDocument>
+								
+							</reference>
+						</act>
+					</entry>
+				</section>
+			</component>
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.37"/>
+					<code code="eCardKONS" codeSystem="1.2.40.0.34.5.194" displayName="eCard Konsultationsdaten" codeSystemName="EXNDS_Sections"/>
+					<title>eCard Konsultationsdaten</title>
+					<text>
+						Pfad (relativ) zu den eCard Konsultationsdaten \kons1-2007.csv (generiert am XX.XX.XXXX)
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.152"/>
+							<code code="eCardKonsDaten" codeSystem="1.2.40.0.34.5.195" displayName="eCard Konsultationsdaten"/>
+							<effectiveTime value="20201016160128+0200"/>
+							<reference typeCode="REFR">
+								<externalAct>
+									<templateId root="1.2.40.0.34.6.0.11.3.153"/>
+									<id root="2.5.4.83" extension="file///kons1-2007.csv"/>
+									<code code="eCardKonsDaten" codeSystem="1.2.40.0.34.5.195" displayName="eCard Konsultationsdaten"/>
+								</externalAct>
+							</reference>
+						</act>
+					</entry>
+				</section>
+			</component>
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.38"/>
+					<code code="ABSDaten" codeSystem="1.2.40.0.34.5.194" displayName="ABS Daten"/>
+					<title>ABS Daten</title>
+					<text>
+						Pfad (relativ) zu den ABS Daten \abs2-2007.csv (generiert am XX.XX.XXXX)
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.154"/>
+							<code code="ABS-Daten" codeSystem="1.2.40.0.34.5.195" displayName="ABS Daten"/>
+							<effectiveTime value="20201016160128+0200"/>
+							<reference typeCode="REFR">
+								<externalAct>
+									<templateId root="1.2.40.0.34.6.0.11.3.153"/>
+									<id root="2.5.4.83" extension="file///abs2-2007.csv"/>
+									<code code="ABS-Daten" codeSystem="1.2.40.0.34.5.195" displayName="ABS Daten"/>
+								</externalAct>
+							</reference>
+						</act>
+					</entry>
+				</section>
+			</component>
+			
+			<component>
+				<section>
+					 <templateId root="1.2.40.0.34.6.0.11.2.36"/>
+					<code code="Attachments" codeSystem="1.2.40.0.34.5.194" displayName="Attachments"/>
+					<title>Attachments</title>
+					<text>
+						Entlassbrief vom XX.XX.XXXX als PDF beigelegt
+					</text>
+					<entry typeCode="COMP">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.155"/>
+							<id root="1.2.3.999" extension="-example only-"/>
+							<code code="BefundKartEintrag" codeSystem="1.2.40.0.34.5.195" displayName="Befund Karteieintrages"/>
+							<effectiveTime value="20201016165054+0200"/>
+							<entryRelationship typeCode="COMP">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.156"/>
+									<code code="BefErstDat" codeSystem="1.2.40.0.34.5.195" displayName="Befunderstellungsdatum"/>
+									<effectiveTime value="20201016170508+0200"/>
+									
+								</act>
+							</entryRelationship>
+							<reference typeCode="REFR">
+								<externalDocument>
+									<templateId root="1.2.40.0.34.6.0.11.3.151"/>
+									<id root="2.5.4.83" extension="file///Laborbefund.pdf"/>
+									<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Laboratory report"/>
+								
+								</externalDocument>
+								 
+							</reference>
+							
+							
+						</act>
+					</entry>
+				</section>
+			</component>
+			
+			<component>
+				<section>
+					<templateId root="1.2.40.0.34.6.0.11.2.39"/>
+					<code code="224459001" codeSystem="2.16.840.1.113883.6.96" displayName="On sick leave from work"/>
+					<title>Krankenstand</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Beginn</th>
+									<th>voraussichtliches Ende</th>
+									<th>Ende</th>
+									<th>Grund</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>5.4.2000</td>
+									<td>10.4.2000</td>
+									<td>13.4.2000</td>
+									<td ID="Krankenstand1">unklares Abdomen</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.2.40.0.34.6.0.11.3.159"/>
+							<code code="Krankenstand" codeSystem="1.2.40.0.34.5.195" displayName="Krankenstand"/>
+							<effectiveTime>
+								<low value="20000405"/>
+								<high value="20000413"/>
+							</effectiveTime>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.157"/>
+									<code code="KrankenstandGrund" codeSystem="1.2.40.0.34.5.195" displayName="Grund für den Krankenstand"/>
+									<value xsi:type="CD" nullFlavor="NA">
+										<originalText>
+											<reference value="#Krankenstand1"/>
+										</originalText>
+									</value>
+								</observation>
+								
+								
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.2.40.0.34.6.0.11.3.158"/>
+									<code code="VorausEnde" codeSystem="1.2.40.0.34.5.195" displayName="Voraussichtliches Ende des Krankenstandes"/>
+									<value xsi:type="TS" value="20000410"/>
+								</observation>
+							</entryRelationship>
+						</act>
+						
+					</entry>
+				</section>
+			</component>
+		
+		
+			
+		</structuredBody>
+	</component>
+</ClinicalDocument>

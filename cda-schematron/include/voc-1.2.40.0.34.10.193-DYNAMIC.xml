@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.193" name="ELGA_AbsentOrUnknownProcedures" displayName="ELGA_AbsentOrUnknownProcedures" effectiveDate="2020-07-27T00:00:00" statusCode="draft" versionLabel="202007(-beta)" url="http://art-decor.org/decor/services/" ident="elgaps-" referencedFrom="at-cda-bbr-">
+        <desc language="de-DE">Value Set keine Eingriffe oder Therapien</desc>
+        <desc language="en-US">Value Set Absent Or Unknown Procedures</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1150.1" identifierName="" canonicalUri="urn:oid:2.16.840.1.113883.5.1150.1" canonicalUriDSTU2="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown" canonicalUriSTU3="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown" canonicalUriR4="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="no-procedure-info" codeSystem="2.16.840.1.113883.5.1150.1" displayName="No information about past history of procedures" level="0" type="L"/>
+            <concept code="no-known-procedures" codeSystem="2.16.840.1.113883.5.1150.1" displayName="No known procedures" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

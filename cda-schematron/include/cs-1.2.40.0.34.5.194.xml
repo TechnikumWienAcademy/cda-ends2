@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeSystems xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <codeSystem xmlns="" ref="1.2.40.0.34.5.194" name="EXNDS_Sections" displayName="EXNDS_Sections"/>
+</codeSystems>

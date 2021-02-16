@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.198" name="ELGA_ConditionStatusCode" displayName="ELGA_ConditionStatusCode" effectiveDate="2020-07-28T00:00:00" statusCode="draft" versionLabel="202007(-beta)" url="http://art-decor.org/decor/services/" ident="elgaps-" referencedFrom="elgagab-">
+        <desc language="de-DE">Value Set für den Status Code eines Problems</desc>
+        <desc language="en-US">Condition or Problem Status Code</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.4.642.3.155" identifierName="Condition&#160;Clinical&#160;Status&#160;Codes" canonicalUri="http://hl7.org/fhir/ValueSet/care-team-category" canonicalUriDSTU2="http://hl7.org/fhir/ValueSet/care-team-category" canonicalUriSTU3="http://hl7.org/fhir/ValueSet/condition-clinical" canonicalUriR4="http://hl7.org/fhir/ValueSet/care-team-category"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="active" codeSystem="2.16.840.1.113883.4.642.3.155" displayName="Active" level="0" type="S"/>
+            <concept code="recurrence" codeSystem="2.16.840.1.113883.4.642.3.155" displayName="Recurrence" level="1" type="L"/>
+            <concept code="relapse" codeSystem="2.16.840.1.113883.4.642.3.155" displayName="Relapse" level="1" type="L"/>
+            <concept code="inactive" codeSystem="2.16.840.1.113883.4.642.3.155" displayName="Inactive" level="0" type="S"/>
+            <concept code="remission" codeSystem="2.16.840.1.113883.4.642.3.155" displayName="Remission" level="1" type="L"/>
+            <concept code="resolved" codeSystem="2.16.840.1.113883.4.642.3.155" displayName="Resolved" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

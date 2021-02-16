@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.6.0.10.32" name="exnds_Versichertenkategorie_VS" displayName="exnds_Versichertenkategorie_VS" effectiveDate="2020-09-25T14:23:08" statusCode="draft" versionLabel="2020">
+        <sourceCodeSystem id="1.2.40.0.34.5.195" identifierName="EXNDS_Concepts" canonicalUri="urn:oid:1.2.40.0.34.5.195" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.195" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.195" canonicalUriR4="urn:oid:1.2.40.0.34.5.195"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="VKT01" codeSystem="1.2.40.0.34.5.195" displayName="Erwerbstätige, Arbeitslose, Selbstversicherte, Zivildiener, Asylanten, Flüchtlinge, Mindestsicherungsempfänger " level="1" type="L"/>
+            <concept code="VKT05" codeSystem="1.2.40.0.34.5.195" displayName="Pensionist, Ruhegenussempfänger" level="1" type="L"/>
+            <concept code="VKT07" codeSystem="1.2.40.0.34.5.195" displayName="Kriegshinterbliebener" level="1" type="L"/>
+            <concept code="VKT20" codeSystem="1.2.40.0.34.5.195" displayName="Zugeteilte nach OFG" level="1" type="L"/>
+            <concept code="VKT21" codeSystem="1.2.40.0.34.5.195" displayName="Zugeteilte nach KOVG, HVG" level="1" type="L"/>
+            <concept code="VKT22" codeSystem="1.2.40.0.34.5.195" displayName="Zugeteilte nach KOVG-D" level="1" type="L"/>
+            <concept code="VKT23" codeSystem="1.2.40.0.34.5.195" displayName="Zugeteilte nach STVG, Impfschadengesetz" level="1" type="L"/>
+            <concept code="VKT24" codeSystem="1.2.40.0.34.5.195" displayName="Zugeteilte nach VOG" level="1" type="L"/>
+            <concept code="VKT25" codeSystem="1.2.40.0.34.5.195" displayName="MKP - Nichtversicherte" level="1" type="L"/>
+            <concept code="VKT26" codeSystem="1.2.40.0.34.5.195" displayName="VU- Nichtversicherte" level="1" type="L"/>
+            <concept code="VKT29" codeSystem="1.2.40.0.34.5.195" displayName="Fremdstaaten (De-facto-Versicherte)" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

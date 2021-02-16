@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.6.0.10.41" name="exnds_GrundFuerBehandlungsschein_VS" displayName="exnds_GrundFuerBehandlungsschein_VS" effectiveDate="2020-10-02T10:27:22" statusCode="draft" versionLabel="2020">
+        <sourceCodeSystem id="1.2.40.0.34.5.195" identifierName="EXNDS_Concepts" canonicalUri="urn:oid:1.2.40.0.34.5.195" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.195" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.195" canonicalUriR4="urn:oid:1.2.40.0.34.5.195"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="GRUVU" codeSystem="1.2.40.0.34.5.195" displayName="Grund für Behandlungsschein" level="0" type="A"/>
+            <concept code="GRUVU_Überweisungsschein" codeSystem="1.2.40.0.34.5.195" displayName="Grund für Überweisungsschein" level="1" type="A"/>
+            <concept code="GRUVU21" codeSystem="1.2.40.0.34.5.195" displayName="fachärztliche Untersuchung" level="2" type="L"/>
+            <concept code="GRUVU22" codeSystem="1.2.40.0.34.5.195" displayName="Erste-Hilfe-Leistung wegen Nichterreichbarkeit" level="2" type="L"/>
+            <concept code="GRUVU23" codeSystem="1.2.40.0.34.5.195" displayName="Erste-Hilfe-Leistung im Bereitschaftsdienst" level="2" type="L"/>
+            <concept code="GRUVU24" codeSystem="1.2.40.0.34.5.195" displayName="Röntgenbefund" level="2" type="L"/>
+            <concept code="GRUVU25" codeSystem="1.2.40.0.34.5.195" displayName="Laborbefund" level="2" type="L"/>
+            <concept code="GRUVU26" codeSystem="1.2.40.0.34.5.195" displayName="Ortswechsel" level="2" type="L"/>
+            <concept code="GRUVU27" codeSystem="1.2.40.0.34.5.195" displayName="Übeweisung zur Therapie" level="2" type="L"/>
+            <concept code="GRUVU_Vertretungsschein" codeSystem="1.2.40.0.34.5.195" displayName="Grund für Vertretungsschein" level="1" type="A"/>
+            <concept code="GRUVU41" codeSystem="1.2.40.0.34.5.195" displayName="Krankheit" level="2" type="L"/>
+            <concept code="GRUVU42" codeSystem="1.2.40.0.34.5.195" displayName="Urlaub" level="2" type="L"/>
+            <concept code="GRUVU43" codeSystem="1.2.40.0.34.5.195" displayName="Fortbildung" level="2" type="L"/>
+            <concept code="GRUVU44" codeSystem="1.2.40.0.34.5.195" displayName="Rücküberweisung nach Krankenstandsvertretung" level="2" type="L"/>
+            <concept code="GRUVU45" codeSystem="1.2.40.0.34.5.195" displayName="Rücküberweisung nach Urlaubsvertretung" level="2" type="L"/>
+            <concept code="GRUVU46" codeSystem="1.2.40.0.34.5.195" displayName="Rücküberweisung nach Fortbildungsvertretung" level="2" type="L"/>
+            <concept code="GRUVU47" codeSystem="1.2.40.0.34.5.195" displayName="Nichterreichbarkeit" level="2" type="L"/>
+            <concept code="GRUVU_Bereitschaftsdienstschein" codeSystem="1.2.40.0.34.5.195" displayName="Grund für Bereitschaftsdienstschein" level="1" type="A"/>
+            <concept code="GRUVU51" codeSystem="1.2.40.0.34.5.195" displayName="Wochentagsnachtdienst" level="2" type="L"/>
+            <concept code="GRUVU_Vorsorgeunterschungsschein" codeSystem="1.2.40.0.34.5.195" displayName="Grund für Vorsorgeuntersuchungsschein" level="1" type="A"/>
+            <concept code="GRUVU61" codeSystem="1.2.40.0.34.5.195" displayName="chefärztlicher Dienst" level="2" type="L"/>
+            <concept code="GRUVU62" codeSystem="1.2.40.0.34.5.195" displayName="Reihen-, Lehrlingsuntersuchung" level="2" type="L"/>
+            <concept code="GRUVU63" codeSystem="1.2.40.0.34.5.195" displayName="Gesundenuntersuchung ohne kurativer Behandlung" level="2" type="L"/>
+            <concept code="GRUVU64" codeSystem="1.2.40.0.34.5.195" displayName="Gesundenuntersuchung mit kurativer Behandlung" level="2" type="L"/>
+            <concept code="GRUVU_Verordnungsschein" codeSystem="1.2.40.0.34.5.195" displayName="Grund für Verordnungsschein" level="1" type="A"/>
+            <concept code="GRUVU91" codeSystem="1.2.40.0.34.5.195" displayName="bestimmte Leistungen" level="2" type="L"/>
+            <concept code="GRUVU92" codeSystem="1.2.40.0.34.5.195" displayName="Röntgenbefund" level="2" type="L"/>
+            <concept code="GRUVU93" codeSystem="1.2.40.0.34.5.195" displayName="Laborbefund" level="2" type="L"/>
+            <concept code="GRUVU94" codeSystem="1.2.40.0.34.5.195" displayName="Verordnung zur Therapie" level="2" type="L"/>
+            <concept code="GRUVU95" codeSystem="1.2.40.0.34.5.195" displayName="Akupunktur" level="2" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

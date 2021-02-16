@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:http://www.example.com/calendarapplication/
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:461092315540@example.com
+ORGANIZER;CN="Dr. Max Mustermann":MAILTO:max.mustermann@example.com
+CONTACT:Herr Theodor Test, Patient ID 012345
+LOCATION:Praxis Dr. Mustermann, Raum 01
+SUMMARY:Verbandswechsel
+DESCRIPTION:Verbandswechsel Hr. Tester
+RESOURCES:Dr. Mustermann, Assistent
+CATEGORIES:Nachbehandlung
+CLASS:PUBLIC
+COLOR:green
+DTSTART:20190910T090000Z
+DTEND:20190910T091500Z
+DTSTAMP:20190903T130000Z
+END:VEVENT
+END:VCALENDAR

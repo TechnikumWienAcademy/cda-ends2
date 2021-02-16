@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.69" name="ELGA_MedikationFrequenz" displayName="ELGA_MedikationFrequenz" effectiveDate="2015-04-29T00:00:00" statusCode="final" versionLabel="3.0" url="http://art-decor.org/decor/services/" ident="elgabbr-" referencedFrom="exnds-">
+        <sourceCodeSystem id="2.16.840.1.113883.6.8" identifierName="Unified&#160;Code&#160;for&#160;Units&#160;of&#160;Measure" canonicalUri="http://unitsofmeasure.org" canonicalUriDSTU2="http://unitsofmeasure.org" canonicalUriSTU3="http://unitsofmeasure.org" canonicalUriR4="http://unitsofmeasure.org"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="d" codeSystem="2.16.840.1.113883.6.8" displayName="Day" level="0" type="L"/>
+            <concept code="mo" codeSystem="2.16.840.1.113883.6.8" displayName="Month" level="0" type="L"/>
+            <concept code="wk" codeSystem="2.16.840.1.113883.6.8" displayName="Week" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.6.0.10.39" name="exnds_Versicherungsträger_VS" displayName="exnds_Versicherungsträger_VS" effectiveDate="2020-10-01T16:51:11" statusCode="draft" versionLabel="2020">
+        <sourceCodeSystem id="1.2.40.0.34.5.195" identifierName="EXNDS_Concepts" canonicalUri="urn:oid:1.2.40.0.34.5.195" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.195" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.195" canonicalUriR4="urn:oid:1.2.40.0.34.5.195"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="VSTRL" codeSystem="1.2.40.0.34.5.195" displayName="Leistungszuständiger Versicherungsträger" level="0" type="A"/>
+            <concept code="Pensionsversicherung" codeSystem="1.2.40.0.34.5.195" displayName="Pensionsversicherung" level="1" type="A"/>
+            <concept code="VSTRL02" codeSystem="1.2.40.0.34.5.195" displayName="Pensionsversicherung" level="2" type="L"/>
+            <concept code="Österreichische Gesundheitskasse" codeSystem="1.2.40.0.34.5.195" displayName="Österreichische Gesundheitskasse" level="1" type="A"/>
+            <concept code="VSTRL11" codeSystem="1.2.40.0.34.5.195" displayName="Österreichische Gesundheitskasse" level="2" type="L"/>
+            <concept code="Betriebskrankenkassen" codeSystem="1.2.40.0.34.5.195" displayName="Betriebskrankenkassen" level="1" type="A"/>
+            <concept code="VSTRL24" codeSystem="1.2.40.0.34.5.195" displayName="Mondi" level="2" type="L"/>
+            <concept code="VSTRL25" codeSystem="1.2.40.0.34.5.195" displayName="Voestalpine Bahnsysteme" level="2" type="L"/>
+            <concept code="VSTRL26" codeSystem="1.2.40.0.34.5.195" displayName="Zeltweg" level="2" type="L"/>
+            <concept code="VSTRL28" codeSystem="1.2.40.0.34.5.195" displayName="Kapfenberg" level="2" type="L"/>
+            <concept code="Sonderversicherungsträger" codeSystem="1.2.40.0.34.5.195" displayName="Sonderversicherungsträger" level="1" type="A"/>
+            <concept code="VSTRL05" codeSystem="1.2.40.0.34.5.195" displayName="Versicherungsanstalt öffentlich Bediensteter, Eisenbahnen und Bergbau – Eisenbahn Bergbau" level="2" type="L"/>
+            <concept code="VSTRL07" codeSystem="1.2.40.0.34.5.195" displayName="Versicherungsanstalt öffentlich Bediensteter, Eisenbahnen und Bergbau – Öffentlich Bedienstete" level="2" type="L"/>
+            <concept code="VSTRL40" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft" level="2" type="L"/>
+            <concept code="VSTRL41" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Wien" level="2" type="L"/>
+            <concept code="VSTRL42" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Niederösterreich" level="2" type="L"/>
+            <concept code="VSTRL43" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Burgenland" level="2" type="L"/>
+            <concept code="VSTRL44" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Oberösterreich" level="2" type="L"/>
+            <concept code="VSTRL45" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Steiermark" level="2" type="L"/>
+            <concept code="VSTRL46" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Kärnten" level="2" type="L"/>
+            <concept code="VSTRL47" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Salzburg" level="2" type="L"/>
+            <concept code="VSTRL48" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Tirol" level="2" type="L"/>
+            <concept code="VSTRL49" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – gewerbliche Wirtschaft Landesstelle Vorarlberg" level="2" type="L"/>
+            <concept code="VSTRL50" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft" level="2" type="L"/>
+            <concept code="VSTRL51" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Wien" level="2" type="L"/>
+            <concept code="VSTRL52" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Niederösterreich" level="2" type="L"/>
+            <concept code="VSTRL53" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Burgenland" level="2" type="L"/>
+            <concept code="VSTRL54" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Oberösterreich" level="2" type="L"/>
+            <concept code="VSTRL55" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Steiermark" level="2" type="L"/>
+            <concept code="VSTRL56" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Kärnten" level="2" type="L"/>
+            <concept code="VSTRL57" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Salzburg" level="2" type="L"/>
+            <concept code="VSTRL58" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Tirol" level="2" type="L"/>
+            <concept code="VSTRL59" codeSystem="1.2.40.0.34.5.195" displayName="Sozialversicherungsanstalt der Selbständigen – Landwirtschaft Landesstelle Vorarlberg" level="2" type="L"/>
+            <concept code="Krankenfürsorgeanstalten" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeanstalten" level="1" type="A"/>
+            <concept code="VSTRL1A" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeanstalt der Bediensteten der Stadt Wien" level="2" type="L"/>
+            <concept code="VSTRL2A" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeanstalt der Beamten der Stadtgemeinde Baden" level="2" type="L"/>
+            <concept code="VSTRL4A" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorge für die Beamten der Landeshauptstadt Linz" level="2" type="L"/>
+            <concept code="VSTRL4B" codeSystem="1.2.40.0.34.5.195" displayName="Kranken‐ und Unfallfürsorge für oberösterreichische Gemeindebeamte" level="2" type="L"/>
+            <concept code="VSTRL4C" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeanstalt für oberösterreichische Landesbeamte" level="2" type="L"/>
+            <concept code="VSTRL4D" codeSystem="1.2.40.0.34.5.195" displayName="Oberösterreichische Lehrer‐Kranken‐ und Unfallfürsorge" level="2" type="L"/>
+            <concept code="VSTRL4E" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorge für die Beamten des Magistrates Steyr" level="2" type="L"/>
+            <concept code="VSTRL4F" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorge für oberösterreichische Beamten der Stadt Wels" level="2" type="L"/>
+            <concept code="VSTRL5A" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeanstalt für die Beamten der Landeshauptstadt Graz" level="2" type="L"/>
+            <concept code="VSTRL6A" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeanstalt für die Beamten der Stadt Villach" level="2" type="L"/>
+            <concept code="VSTRL7A" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeanstalt der Magistratsbeamten der Landeshauptstadt Salzburg" level="2" type="L"/>
+            <concept code="VSTRL7B" codeSystem="1.2.40.0.34.5.195" displayName="Krankenfürsorgeeinrichtung der Beamten der Stadtgemeinde Hallein" level="2" type="L"/>
+            <concept code="VSTRL8B" codeSystem="1.2.40.0.34.5.195" displayName="Kranken‐ und Unfallfürsorge der Tiroler Gemeindebeamten" level="2" type="L"/>
+            <concept code="VSTRL8C" codeSystem="1.2.40.0.34.5.195" displayName="Kranken‐ und Unfallfürsorge der Tiroler Landesbeamten" level="2" type="L"/>
+            <concept code="VSTRL8D" codeSystem="1.2.40.0.34.5.195" displayName="Kranken‐ und Unfallfürsorge der Tiroler Landeslehrer" level="2" type="L"/>
+            <concept code="Sonstige" codeSystem="1.2.40.0.34.5.195" displayName="Sonstige" level="1" type="A"/>
+            <concept code="VSTRL1L" codeSystem="1.2.40.0.34.5.195" displayName="Magistrat der Stadt Wien" level="2" type="L"/>
+            <concept code="VSTRL4L" codeSystem="1.2.40.0.34.5.195" displayName="Landesregierung Oberösterreich" level="2" type="L"/>
+            <concept code="VSTRL4G" codeSystem="1.2.40.0.34.5.195" displayName="Magistrat der Stadt Steyr" level="2" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

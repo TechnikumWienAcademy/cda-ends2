@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.184" name="ELGA_ConditionVerificationStatus" displayName="ELGA_ConditionVerificationStatus" effectiveDate="2020-07-28T00:00:00" statusCode="draft" versionLabel="202007(-beta)" url="http://art-decor.org/decor/services/" ident="elgaps-" referencedFrom="elgagab-">
+        <desc language="de-DE">Diagnosesicherheit</desc>
+        <desc language="en-US">Diagnostic confidence</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.4.642.3.166" identifierName="RestfulCapabilityMode" canonicalUri="http://hl7.org/fhir/ValueSet/condition-ver-status" canonicalUriDSTU2="http://hl7.org/fhir/ValueSet/condition-ver-status" canonicalUriSTU3="http://hl7.org/fhir/ValueSet/restful-capability-mode" canonicalUriR4="http://hl7.org/fhir/ValueSet/condition-ver-status"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="unconfirmed" codeSystem="2.16.840.1.113883.4.642.3.166" displayName="unconfirmed" level="0" type="S"/>
+            <concept code="provisional" codeSystem="2.16.840.1.113883.4.642.3.166" displayName="provisional" level="1" type="L"/>
+            <concept code="differential" codeSystem="2.16.840.1.113883.4.642.3.166" displayName="differential" level="1" type="L"/>
+            <concept code="confirmed" codeSystem="2.16.840.1.113883.4.642.3.166" displayName="confirmed" level="0" type="L"/>
+            <concept code="refuted" codeSystem="2.16.840.1.113883.4.642.3.166" displayName="refuted" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.196" name="ELGA_ProcedureTargetSite" displayName="ELGA_TargetSite" effectiveDate="2017-09-06T21:26:48" statusCode="draft" url="http://art-decor.org/decor/services/" ident="elgaps-" referencedFrom="elgabbr-">
+        <sourceCodeSystem id="2.16.840.1.1138836.96" identifierName="" canonicalUri="urn:oid:2.16.840.1.1138836.96" canonicalUriDSTU2="urn:oid:2.16.840.1.1138836.96" canonicalUriSTU3="urn:oid:2.16.840.1.1138836.96" canonicalUriR4="urn:oid:2.16.840.1.1138836.96"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <include code="442083009" codeSystem="2.16.840.1.1138836.96" displayName="Anatomical or acquired body structure (body structure)" op="descendent-of" exception="false"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

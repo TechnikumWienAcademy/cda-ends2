@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.30" name="ELGA_MedikationTherapieArt" displayName="ELGA_MedikationTherapieArt" effectiveDate="2015-03-31T00:00:00" statusCode="final" url="http://art-decor.org/decor/services/" ident="elgabbr-" referencedFrom="exnds-">
+        <desc language="de-DE">ELGA Valueset für Therapieart</desc>
+        <desc language="en-US">ELGA Valueset for type of therapy</desc>
+        <sourceCodeSystem id="1.2.40.0.10.1.4.3.4.3.6" identifierName="" canonicalUri="urn:oid:1.2.40.0.10.1.4.3.4.3.6" canonicalUriDSTU2="urn:oid:1.2.40.0.10.1.4.3.4.3.6" canonicalUriSTU3="urn:oid:1.2.40.0.10.1.4.3.4.3.6" canonicalUriR4="urn:oid:1.2.40.0.10.1.4.3.4.3.6"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="EINZEL" codeSystem="1.2.40.0.10.1.4.3.4.3.6" displayName="Einzelverordnung" level="0" type="L"/>
+            <concept code="NICHTEINZEL" codeSystem="1.2.40.0.10.1.4.3.4.3.6" displayName="Nicht-Einzelverordnung" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.181" name="atcdabbr_AllergyReaction_VS" displayName="atcdabbr_AllergyReaction_VS" effectiveDate="2020-10-30T00:00:00" statusCode="draft" versionLabel="202010(-beta)" url="http://art-decor.org/decor/services/" ident="at-cda-bbr-" referencedFrom="exnds-">
+        <desc language="de-DE">Überempfindlichkeitsreaktionen: Auswirkungen von Allergien und Intoleranzen</desc>
+        <desc language="en-US">Reactions on Allergies Or Intolerances</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms" canonicalUri="http://snomed.info/sct" canonicalUriDSTU2="http://snomed.info/sct" canonicalUriSTU3="http://snomed.info/sct" canonicalUriR4="http://snomed.info/sct"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+        <conceptList>
+            <concept code="39579001" codeSystem="2.16.840.1.113883.6.96" displayName="Anaphylaxis" level="0" type="L"/>
+            <concept code="41291007" codeSystem="2.16.840.1.113883.6.96" displayName="Angio-oedema" level="0" type="L"/>
+            <concept code="195967001" codeSystem="2.16.840.1.113883.6.96" displayName="Asthma" level="0" type="L"/>
+            <concept code="267036007" codeSystem="2.16.840.1.113883.6.96" displayName="Dyspnoea" level="0" type="L"/>
+            <concept code="24079001" codeSystem="2.16.840.1.113883.6.96" displayName="Atopic dermatitis" level="0" type="L"/>
+            <concept code="359610006" codeSystem="2.16.840.1.113883.6.96" displayName="Ocular hyperaemia [veraltet]" level="0" type="D"/>
+            <concept code="4386001" codeSystem="2.16.840.1.113883.6.96" displayName="Bronchospasm" level="0" type="L"/>
+            <concept code="271759003" codeSystem="2.16.840.1.113883.6.96" displayName="Bullous eruption" level="0" type="L"/>
+            <concept code="9826008" codeSystem="2.16.840.1.113883.6.96" displayName="Conjunctivitis" level="0" type="L"/>
+            <concept code="62315008" codeSystem="2.16.840.1.113883.6.96" displayName="Diarrhoea" level="0" type="L"/>
+            <concept code="702809001" codeSystem="2.16.840.1.113883.6.96" displayName="Drug reaction with eosinophilia and systemic symptoms" level="0" type="L"/>
+            <concept code="43116000" codeSystem="2.16.840.1.113883.6.96" displayName="Eczema" level="0" type="L"/>
+            <concept code="23924001" codeSystem="2.16.840.1.113883.6.96" displayName="Tight chest" level="0" type="L"/>
+            <concept code="95361005" codeSystem="2.16.840.1.113883.6.96" displayName="Inflammatory disease of mucous membrane" level="0" type="L"/>
+            <concept code="1985008" codeSystem="2.16.840.1.113883.6.96" displayName="Vomitus" level="0" type="L"/>
+            <concept code="36715001" codeSystem="2.16.840.1.113883.6.96" displayName="EM - Erythema multiforme" level="0" type="L"/>
+            <concept code="3723001" codeSystem="2.16.840.1.113883.6.96" displayName="Arthritis" level="0" type="L"/>
+            <concept code="271807003" codeSystem="2.16.840.1.113883.6.96" displayName="Eruption of skin" level="0" type="L"/>
+            <concept code="418363000" codeSystem="2.16.840.1.113883.6.96" displayName="Itching of skin" level="0" type="L"/>
+            <concept code="698247007" codeSystem="2.16.840.1.113883.6.96" displayName="Cardiac arrhythmia" level="0" type="L"/>
+            <concept code="410430005" codeSystem="2.16.840.1.113883.6.96" displayName="Cardiorespiratory arrest" level="0" type="L"/>
+            <concept code="49727002" codeSystem="2.16.840.1.113883.6.96" displayName="Cough" level="0" type="L"/>
+            <concept code="418290006" codeSystem="2.16.840.1.113883.6.96" displayName="Itching" level="0" type="L"/>
+            <concept code="40275004" codeSystem="2.16.840.1.113883.6.96" displayName="Contact dermatitis" level="0" type="L"/>
+            <concept code="91175000" codeSystem="2.16.840.1.113883.6.96" displayName="Seizure" level="0" type="L"/>
+            <concept code="51599000" codeSystem="2.16.840.1.113883.6.96" displayName="Oedema of larynx" level="0" type="L"/>
+            <concept code="768962006" codeSystem="2.16.840.1.113883.6.96" displayName="Lyell syndrome" level="0" type="L"/>
+            <concept code="247471006" codeSystem="2.16.840.1.113883.6.96" displayName="Maculopapular rash" level="0" type="L"/>
+            <concept code="52845002" codeSystem="2.16.840.1.113883.6.96" displayName="Nephritis" level="0" type="L"/>
+            <concept code="76067001" codeSystem="2.16.840.1.113883.6.96" displayName="Sneezing" level="0" type="L"/>
+            <concept code="271757001" codeSystem="2.16.840.1.113883.6.96" displayName="Papular eruption" level="0" type="L"/>
+            <concept code="115664001" codeSystem="2.16.840.1.113883.6.96" displayName="Photoallergy [veraltet]" level="0" type="D"/>
+            <concept code="247472004" codeSystem="2.16.840.1.113883.6.96" displayName="Weal" level="0" type="L"/>
+            <concept code="70076002" codeSystem="2.16.840.1.113883.6.96" displayName="Rhinitis" level="0" type="L"/>
+            <concept code="73442001" codeSystem="2.16.840.1.113883.6.96" displayName="Stevens-Johnson syndrome" level="0" type="L"/>
+            <concept code="162290004" codeSystem="2.16.840.1.113883.6.96" displayName="Dry eyes" level="0" type="L"/>
+            <concept code="422587007" codeSystem="2.16.840.1.113883.6.96" displayName="Nausea" level="0" type="L"/>
+            <concept code="126485001" codeSystem="2.16.840.1.113883.6.96" displayName="Urticaria" level="0" type="L"/>
+            <concept code="31996006" codeSystem="2.16.840.1.113883.6.96" displayName="Vasculitis" level="0" type="L"/>
+            <concept code="111209006" codeSystem="2.16.840.1.113883.6.96" displayName="Photoallergic dermatitis" level="0" type="L"/>
+            <concept code="781682005" codeSystem="2.16.840.1.113883.6.96" displayName="Hyperemia of eye" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

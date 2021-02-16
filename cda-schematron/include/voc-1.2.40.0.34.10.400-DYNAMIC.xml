@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.10.400" name="exnds_behandlungschein" displayName="Behandlungsschein" effectiveDate="2020-03-08T15:12:28" statusCode="draft" versionLabel="2020">
+        <desc language="de-DE">Daten des Behandlungscheins für NDS2</desc>
+        <sourceCodeSystem id="1.2.40.0.34.5.99" identifierName="" canonicalUri="urn:oid:1.2.40.0.34.5.99" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.99" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.99" canonicalUriR4="urn:oid:1.2.40.0.34.5.99"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="Scheinart" codeSystem="1.2.40.0.34.5.99" displayName="Scheinart" level="0" type="L"/>
+            <concept code="Abgabedatum" codeSystem="1.2.40.0.34.5.99" displayName="Abgabedatum" level="0" type="L"/>
+            <concept code="Ueberweisungsdatum" codeSystem="1.2.40.0.34.5.99" displayName="Überweisungsdatum" level="0" type="L"/>
+            <concept code="Schein-ZuweisenderArzt" codeSystem="1.2.40.0.34.5.99" displayName="Schein- Zuweisender Arzt/Ärztin" level="0" type="L"/>
+            <concept code="Zeitraum" codeSystem="1.2.40.0.34.5.99" displayName="Zeitraum" level="0" type="L"/>
+            <concept code="Kassencode" codeSystem="1.2.40.0.34.5.99" displayName="Kassencode" level="0" type="L"/>
+            <concept code="Fremstaaten-Kennz" codeSystem="1.2.40.0.34.5.99" displayName="Fremdstaaten-Kennzeichen" level="0" type="L"/>
+            <concept code="Dienstgeber" codeSystem="1.2.40.0.34.5.99" displayName="Dienstgeber" level="0" type="L"/>
+            <concept code="Saldo" codeSystem="1.2.40.0.34.5.99" displayName="Saldo" level="0" type="L">
+                <desc language="de-DE">
+                    <span style="white-space:pre"/>
+                </desc>
+            </concept>
+            <concept code="Fragestellung" codeSystem="1.2.40.0.34.5.99" displayName="Fragestellung" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

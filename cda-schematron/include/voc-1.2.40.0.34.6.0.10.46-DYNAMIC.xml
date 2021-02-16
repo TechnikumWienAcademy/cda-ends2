@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.6.0.10.46" name="exnds_ArzneimittelAbgabeTyp_VS" displayName="exnds_ArzneimittelAbgabeTyp_VS" effectiveDate="2020-10-06T17:14:53" statusCode="draft" versionLabel="2020">
+        <sourceCodeSystem id="1.2.40.0.34.5.195" identifierName="EXNDS_Concepts" canonicalUri="urn:oid:1.2.40.0.34.5.195" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.195" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.195" canonicalUriR4="urn:oid:1.2.40.0.34.5.195"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="ArnMittelAbgabe" codeSystem="1.2.40.0.34.5.195" displayName="Arzneimittel Abgabeart" level="0" type="A"/>
+            <concept code="ArnMittelAbgabe_K" codeSystem="1.2.40.0.34.5.195" displayName="Kasse" level="1" type="L"/>
+            <concept code="ArnMittelAbgabe_B" codeSystem="1.2.40.0.34.5.195" displayName="Barverkauf" level="1" type="L"/>
+            <concept code="ArnMittelAbgabe_oeA" codeSystem="1.2.40.0.34.5.195" displayName="oeffentliche Apotheke" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

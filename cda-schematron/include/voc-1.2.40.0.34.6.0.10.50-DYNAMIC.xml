@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.2.40.0.34.6.0.10.50" name="exnds_FormatCodes_VS" displayName="exnds_FormatCodes_VS" effectiveDate="2020-12-04T10:39:22" statusCode="draft" versionLabel="2020">
+        <sourceCodeSystem id="1.2.40.0.34.5.199" identifierName="EXNDS_FormatCodes" canonicalUri="urn:oid:1.2.40.0.34.5.199" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.199" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.199" canonicalUriR4="urn:oid:1.2.40.0.34.5.199"/>
+        <sourceCodeSystem id="1.2.40.0.34.5.41" identifierName="ELGA_FormatCodeZusatz" canonicalUri="urn:oid:1.2.40.0.34.5.41" canonicalUriDSTU2="urn:oid:1.2.40.0.34.5.41" canonicalUriSTU3="urn:oid:1.2.40.0.34.5.41" canonicalUriR4="urn:oid:1.2.40.0.34.5.41"/>
+        <publishingAuthority name="HL7 Austria">
+            <addrLine>HL7-Anwendergruppe Österreich</addrLine>
+            <addrLine>Eckertstraße 30i</addrLine>
+            <addrLine>8020 Graz</addrLine>
+            <addrLine>Österreich</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="ical" codeSystem="1.2.40.0.34.5.199" displayName="iCalendar" level="0" type="L"/>
+            <concept code="json" codeSystem="1.2.40.0.34.5.199" displayName="JSON" level="0" type="L"/>
+            <concept code="ebi" codeSystem="1.2.40.0.34.5.199" displayName="ebInterface" level="0" type="L"/>
+            <concept code="pep" codeSystem="1.2.40.0.34.5.199" displayName="Peppol-UBL" level="0" type="L"/>
+            <concept code="wah" codeSystem="1.2.40.0.34.5.199" displayName="WAHonline" level="0" type="L"/>
+            <concept code="edi" codeSystem="1.2.40.0.34.5.199" displayName="EDIVKA-Datenaustausch" level="0" type="L"/>
+            <concept code="dep" codeSystem="1.2.40.0.34.5.199" displayName="Datenerfassungsprotokoll" level="0" type="L"/>
+            <concept code="datev" codeSystem="1.2.40.0.34.5.199" displayName="Buchhaltungsdaten" level="0" type="L"/>
+            <concept code="GIF" codeSystem="1.2.40.0.34.5.41" displayName="GIF" level="0" type="L"/>
+            <concept code="JPG" codeSystem="1.2.40.0.34.5.41" displayName="JPG" level="0" type="L"/>
+            <concept code="PDF" codeSystem="1.2.40.0.34.5.41" displayName="PDF" level="0" type="L"/>
+            <concept code="PNG" codeSystem="1.2.40.0.34.5.41" displayName="PNG" level="0" type="L"/>
+            <concept code="TEXT" codeSystem="1.2.40.0.34.5.41" displayName="TEXT" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

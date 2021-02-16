@@ -1,0 +1,6 @@
+<valueSet name='ASW_HerstellerX_WeitereDaten' displayName='Weitere Daten von Hersteller X' effectiveDate='2017-01-26' id='1.2.40.0.34.99.111' statusCode='final'  website=''  version='' beschreibung='' description='' version-beschreibung='' unvollstaendig='false'><conceptList>
+  <concept code='ImpfSch' codeSystem='1.2.40.0.34.99.111' displayName='Impfschaden' level='0' type='L' concept_beschreibung='' deutsch='' hinweise='' relationships='' conceptStatusDate='2017-01-26'/>
+  <concept code='BevOrth' codeSystem='1.2.40.0.34.99.111' displayName='Bevorzugter Orthopäde' level='0' type='L' concept_beschreibung='' deutsch='' hinweise='' relationships='' conceptStatusDate='2017-01-26'/>
+  <concept code='BevGyn' codeSystem='1.2.40.0.34.99.111' displayName='Bevorzugter GynäkologIn' level='0' type='L' concept_beschreibung='' deutsch='' hinweise='' relationships='' conceptStatusDate='2017-01-26'/>
+</conceptList>
+</valueSet>

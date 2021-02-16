@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Template derived pattern
+===========================================
+ID: 1.2.40.0.34.6.0.11.2.34
+Name: EXNDS Karteineintragungen
+Description: In dieser Sektion können die Karteieintragungen aus dem Arztpraxissoftwaresystem angegeben werden. Die Angabe erfolgt in strukturierter Form mit Hilfe einer Tabelle.
+-->
+<pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="template-1.2.40.0.34.6.0.11.2.34-2019-06-14T090237-closed">
+    <title>EXNDS Karteineintragungen</title>
+
+   <!-- Checking undefined contents for template/element @isClosed="true". Match context that we did not already match -->
+    <rule context="*[hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]]/*[not(@xsi:nil = 'true')][not(self::hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']])]" id="d3462930e11231-true-d3726369e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--exnds-?id=1.2.40.0.34.6.0.11.2.34" test="not(.)">(exnds_section_karteineintragungen)/d3462930e11231-true-d3726369e0: '<value-of select="name(..)"/>' ist als geschlossen definiert und dieses Element '<name/>' ist nicht erlaubt oder nicht mit diesem Inhalt erlaubt. Dies kann templateId, code oder id betreffen. Erwartet:  hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']] (rule-reference: d3462930e11231-true-d3726369e0)</assert>
+    </rule>
+
+   <!-- Checking undefined contents for template/element @isClosed="true". Match context that we did not already match -->
+    <rule context="*[hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]]/hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]/*[not(@xsi:nil = 'true')][not(self::hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34'] | self::hl7:code[(@code = 'KARTEI_EINTRAGUNGEN' and @codeSystem = '1.2.40.0.34.5.194')] | self::hl7:title[not(@nullFlavor)] | self::hl7:text[not(@nullFlavor)] | self::hl7:entry[hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]])]" id="d3462930e11253-true-d3726428e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--exnds-?id=1.2.40.0.34.6.0.11.2.34" test="not(.)">(exnds_section_karteineintragungen)/d3462930e11253-true-d3726428e0: '<value-of select="name(..)"/>' ist als geschlossen definiert und dieses Element '<name/>' ist nicht erlaubt oder nicht mit diesem Inhalt erlaubt. Dies kann templateId, code oder id betreffen. Erwartet:  hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34'] | hl7:code[(@code = 'KARTEI_EINTRAGUNGEN' and @codeSystem = '1.2.40.0.34.5.194')] | hl7:title[not(@nullFlavor)] | hl7:text[not(@nullFlavor)] | hl7:entry[hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]] (rule-reference: d3462930e11253-true-d3726428e0)</assert>
+    </rule>
+
+   <!-- Checking undefined contents for template/element @isClosed="true". Match context that we did not already match -->
+    <rule context="*[hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]]/hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]/hl7:entry[hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]]/*[not(@xsi:nil = 'true')][not(self::hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']])]" id="d3462930e11273-true-d3726479e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--exnds-?id=1.2.40.0.34.6.0.11.2.34" test="not(.)">(exnds_section_karteineintragungen)/d3462930e11273-true-d3726479e0: '<value-of select="name(..)"/>' ist als geschlossen definiert und dieses Element '<name/>' ist nicht erlaubt oder nicht mit diesem Inhalt erlaubt. Dies kann templateId, code oder id betreffen. Erwartet:  hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']] (rule-reference: d3462930e11273-true-d3726479e0)</assert>
+    </rule>
+
+   <!-- Checking undefined contents for template/element @isClosed="true". Match context that we did not already match -->
+    <rule context="*[hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]]/hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]/hl7:entry[hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]]/hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]/*[not(@xsi:nil = 'true')][not(self::hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137'] | self::hl7:id | self::hl7:code[(@code = 'Karteieintragungen' and @codeSystem = '1.2.40.0.34.5.195')] | self::hl7:statusCode[@code = 'completed' or @nullFlavor] | self::hl7:effectiveTime | self::hl7:component[hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']]])]" id="d3726451e5-true-d3726539e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--exnds-?id=1.2.40.0.34.6.0.11.2.34" test="not(.)">(exnds_section_karteineintragungen)/d3726451e5-true-d3726539e0: '<value-of select="name(..)"/>' ist als geschlossen definiert und dieses Element '<name/>' ist nicht erlaubt oder nicht mit diesem Inhalt erlaubt. Dies kann templateId, code oder id betreffen. Erwartet:  hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137'] | hl7:id | hl7:code[(@code = 'Karteieintragungen' and @codeSystem = '1.2.40.0.34.5.195')] | hl7:statusCode[@code = 'completed' or @nullFlavor] | hl7:effectiveTime | hl7:component[hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']]] (rule-reference: d3726451e5-true-d3726539e0)</assert>
+    </rule>
+
+   <!-- Checking undefined contents for template/element @isClosed="true". Match context that we did not already match -->
+    <rule context="*[hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]]/hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]/hl7:entry[hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]]/hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]/hl7:component[hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']]]/*[not(@xsi:nil = 'true')][not(self::hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']])]" id="d3726451e21-true-d3726589e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--exnds-?id=1.2.40.0.34.6.0.11.2.34" test="not(.)">(exnds_section_karteineintragungen)/d3726451e21-true-d3726589e0: '<value-of select="name(..)"/>' ist als geschlossen definiert und dieses Element '<name/>' ist nicht erlaubt oder nicht mit diesem Inhalt erlaubt. Dies kann templateId, code oder id betreffen. Erwartet:  hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']] (rule-reference: d3726451e21-true-d3726589e0)</assert>
+    </rule>
+
+   <!-- Checking undefined contents for template/element @isClosed="true". Match context that we did not already match -->
+    <rule context="*[hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]]/hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]/hl7:entry[hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]]/hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]/hl7:component[hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']]]/hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']]/*[not(@xsi:nil = 'true')][not(self::hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136'] | self::hl7:id | self::hl7:code[(@code = 'Karteineintrag' and @codeSystem = '1.2.40.0.34.5.195')] | self::hl7:text | self::hl7:effectiveTime | self::hl7:value[not(@nullFlavor)])]" id="d3726567e5-true-d3726633e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--exnds-?id=1.2.40.0.34.6.0.11.2.34" test="not(.)">(exnds_section_karteineintragungen)/d3726567e5-true-d3726633e0: '<value-of select="name(..)"/>' ist als geschlossen definiert und dieses Element '<name/>' ist nicht erlaubt oder nicht mit diesem Inhalt erlaubt. Dies kann templateId, code oder id betreffen. Erwartet:  hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136'] | hl7:id | hl7:code[(@code = 'Karteineintrag' and @codeSystem = '1.2.40.0.34.5.195')] | hl7:text | hl7:effectiveTime | hl7:value[not(@nullFlavor)] (rule-reference: d3726567e5-true-d3726633e0)</assert>
+    </rule>
+
+   <!-- Checking undefined contents for template/element @isClosed="true". Match context that we did not already match -->
+    <rule context="*[hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]]/hl7:section[hl7:templateId[@root = '1.2.40.0.34.6.0.11.2.34']]/hl7:entry[hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]]/hl7:organizer[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.137']]/hl7:component[hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']]]/hl7:observation[hl7:templateId[@root = '1.2.40.0.34.6.0.11.3.136']]/hl7:text/*[not(@xsi:nil = 'true')][not(self::hl7:reference[not(@nullFlavor)])]" id="d3726651e37-true-d3726662e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--exnds-?id=1.2.40.0.34.6.0.11.9.1" test="not(.)">(atcdabrr_other_NarrativeTextReference)/d3726651e37-true-d3726662e0: '<value-of select="name(..)"/>' ist als geschlossen definiert und dieses Element '<name/>' ist nicht erlaubt oder nicht mit diesem Inhalt erlaubt. Dies kann templateId, code oder id betreffen. Erwartet:  hl7:reference[not(@nullFlavor)] (rule-reference: d3726651e37-true-d3726662e0)</assert>
+    </rule>
+</pattern>

@@ -1,0 +1,5 @@
+<valueSet name='ASW_HerstellerX_Orthopaeden' displayName='Bevorzugte Orthopäden' effectiveDate='2017-01-26' id='1.2.40.0.34.5.76' statusCode='final'  website=''  version='' beschreibung='' description='' version-beschreibung='' unvollstaendig='false'><conceptList>
+  <concept code='O1' codeSystem='1.2.40.0.34.99.112' displayName='Dr. Ernst Peter' level='0' type='L' concept_beschreibung='' deutsch='' hinweise='' relationships='' conceptStatusDate='2017-01-26'/>
+  <concept code='O2' codeSystem='1.2.40.0.34.99.112' displayName='Dr. Petra Ernesto' level='0' type='L' concept_beschreibung='' deutsch='' hinweise='' relationships='' conceptStatusDate='2017-01-26'/>
+</conceptList>
+</valueSet>
