@@ -1,0 +1,1 @@
+-- HL7 Austria ENDS2 Leitfaden Version 1.0.0+20210310 --

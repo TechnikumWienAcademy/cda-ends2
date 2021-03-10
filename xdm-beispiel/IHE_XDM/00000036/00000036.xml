@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet type="text/xsl" href="ELGA_Stylesheet_v1.0.xsl"?>
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:hl7at="urn:hl7-at:v3" xmlns:pharm="urn:ihe:pharm:medication">
-	<!--	=======================================================================	Allgemeiner Ambulanzbefund	*** CDA Demo-Dokument ***	Dies ist ein Beispielbefund. Bei den Inhalten handelt es sich um synthetische Mustertexte und keinesfalls um personenbezogene Echtdaten oder realistische Befunde.	Das Beispiel veranschaulicht die technischen Möglichkeiten unter Verwendung eines Maximums der erlaubten Optionen.	Autoren	Matthias Frohner, FHTW	Nikolaus Krondraf, FHTW	Stefan Sabutsch, ELGA	Dokumentrevision	V02	Datum 				02.05.2019	Die Kommentare in diesem CDA Dokument dienen lediglich der Orientierungshilfe und sind nicht 	Bestandteil einer konkreten Implementierung!	=======================================================================	 		======================================================================= 	-->
+	<!--	=======================================================================	Allgemeiner Ambulanzbefund	*** CDA Demo-Dokument ***	Dies ist ein Beispielbefund. Bei den Inhalten handelt es sich um synthetische Mustertexte und keinesfalls um personenbezogene Echtdaten oder realistische Befunde.	Das Beispiel veranschaulicht die technischen Möglichkeiten unter Verwendung eines Maximums der erlaubten Optionen.	
+	
+	Autoren	
+		Matthias Frohner, FHTW	
+		Nikolaus Krondraf, FHTW	
+		Stefan Sabutsch, ELGA	
+	
+	Version				1.0.0+20210310	
+	Datum 				10.03.2021	
+	
+	Die Kommentare in diesem CDA Dokument dienen lediglich der Orientierungshilfe und sind nicht 	Bestandteil einer konkreten Implementierung!	=======================================================================	 		======================================================================= 	-->
 	<!--	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	Administrative Daten "CDA Header"	siehe Allgemeiner Leitfaden, Kapitel 6	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************	************************************************************************************************************************************************ 	-->
 	<!--	========================================================================	========================================================================	Dokumentenstruktur	siehe Allgemeiner Leitfaden, Kapitel 6.2	========================================================================	======================================================================== 	-->
 	<!--	Hoheitsbereich des Dokuments (siehe Allgemeiner Leitfaden, Kapitel 6.2.3) 	-->
